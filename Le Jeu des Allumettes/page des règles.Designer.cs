@@ -104,6 +104,7 @@
             Controls.Add(flpHautPage);
             Controls.Add(lblRèglesJeu);
             Controls.Add(btnRetour);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MaximumSize = new Size(626, 1075);
             MinimizeBox = false;

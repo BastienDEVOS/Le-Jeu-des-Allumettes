@@ -143,6 +143,7 @@
             Controls.Add(picLogoCentre);
             Controls.Add(flpHautPage);
             ForeColor = Color.Black;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
             MaximumSize = new Size(1946, 1315);
             MinimizeBox = false;
