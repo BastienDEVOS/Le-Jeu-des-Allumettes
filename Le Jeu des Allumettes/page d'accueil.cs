@@ -1,3 +1,5 @@
+using System.Media;
+
 namespace Le_Jeu_des_Allumettes
 {
     public partial class frmAcceuil : Form
@@ -9,7 +11,8 @@ namespace Le_Jeu_des_Allumettes
 
         private void frmAcceuil_Load(object sender, EventArgs e)
         {
-
+            //SoundPlayer player = new SoundPlayer("Ressources\\allumage d'allumette.wav\\");
+            //player.Play();
         }
 
         private void btnJouer_Click(object sender, EventArgs e)

@@ -11,10 +11,18 @@
 
   <ItemGroup>
     <None Remove="img\Logo-le-jeu-des-allumettes.ico" />
+    <None Remove="Resources\allumage d%27allumette.wav" />
+    <None Remove="Ressources\allumage d%27allumette.wav" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="img\Logo-le-jeu-des-allumettes.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\allumage d'allumette.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ressources\allumage d'allumette.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
