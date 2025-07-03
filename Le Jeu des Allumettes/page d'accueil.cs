@@ -16,5 +16,11 @@ namespace Le_Jeu_des_Allumettes
         {
 
         }
+
+        private void brnRègles_Click(object sender, EventArgs e)
+        {
+            frmRègles FrmRègles = new frmRègles();
+            FrmRègles.Show();
+        }
     }
 }

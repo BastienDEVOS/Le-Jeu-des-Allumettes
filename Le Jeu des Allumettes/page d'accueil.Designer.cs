@@ -34,7 +34,7 @@
             lblTitrePage = new Label();
             picLogoCentre = new PictureBox();
             btnJouer = new Button();
-            brnrègles = new Button();
+            brnRègles = new Button();
             btnParamètres = new Button();
             flpHautPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogoHaut).BeginInit();
@@ -100,20 +100,21 @@
             btnJouer.UseVisualStyleBackColor = false;
             btnJouer.Click += btnJouer_Click;
             // 
-            // brnrègles
+            // brnRègles
             // 
-            brnrègles.BackColor = Color.FromArgb(214, 73, 38);
-            brnrègles.FlatAppearance.BorderColor = Color.FromArgb(106, 45, 20);
-            brnrègles.FlatAppearance.BorderSize = 10;
-            brnrègles.FlatStyle = FlatStyle.Flat;
-            brnrègles.Font = new Font("Segoe UI Black", 20F, FontStyle.Bold);
-            brnrègles.ForeColor = Color.FromArgb(31, 41, 49);
-            brnrègles.Location = new Point(510, 936);
-            brnrègles.Name = "brnrègles";
-            brnrègles.Size = new Size(900, 100);
-            brnrègles.TabIndex = 3;
-            brnrègles.Text = "RÈGLES";
-            brnrègles.UseVisualStyleBackColor = false;
+            brnRègles.BackColor = Color.FromArgb(214, 73, 38);
+            brnRègles.FlatAppearance.BorderColor = Color.FromArgb(106, 45, 20);
+            brnRègles.FlatAppearance.BorderSize = 10;
+            brnRègles.FlatStyle = FlatStyle.Flat;
+            brnRègles.Font = new Font("Segoe UI Black", 20F, FontStyle.Bold);
+            brnRègles.ForeColor = Color.FromArgb(31, 41, 49);
+            brnRègles.Location = new Point(510, 936);
+            brnRègles.Name = "brnRègles";
+            brnRègles.Size = new Size(900, 100);
+            brnRègles.TabIndex = 3;
+            brnRègles.Text = "RÈGLES";
+            brnRègles.UseVisualStyleBackColor = false;
+            brnRègles.Click += brnRègles_Click;
             // 
             // btnParamètres
             // 
@@ -137,13 +138,15 @@
             BackColor = Color.FromArgb(237, 237, 237);
             ClientSize = new Size(1920, 1244);
             Controls.Add(btnParamètres);
-            Controls.Add(brnrègles);
+            Controls.Add(brnRègles);
             Controls.Add(btnJouer);
             Controls.Add(picLogoCentre);
             Controls.Add(flpHautPage);
             ForeColor = Color.Black;
             MaximizeBox = false;
+            MaximumSize = new Size(1946, 1315);
             MinimizeBox = false;
+            MinimumSize = new Size(1946, 1315);
             Name = "frmAcceuil";
             Text = "page d'accueil";
             Load += frmAcceuil_Load;
@@ -161,7 +164,7 @@
         private Label lblTitrePage;
         private PictureBox picLogoCentre;
         private Button btnJouer;
-        private Button brnrègles;
+        private Button brnRègles;
         private Button btnParamètres;
     }
 }
