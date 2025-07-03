@@ -1,6 +1,6 @@
 ﻿namespace Le_Jeu_des_Allumettes
 {
-    partial class page_des_paramètres
+    partial class frmParamètres
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(page_des_paramètres));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmParamètres));
             flpHautPage = new FlowLayoutPanel();
             picLogoHaut = new PictureBox();
             lblTitrePage = new Label();
@@ -157,7 +157,7 @@
             lblMusic.TabIndex = 14;
             lblMusic.Text = "Music";
             // 
-            // page_des_paramètres
+            // frmParamètres
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -176,7 +176,7 @@
             MaximumSize = new Size(626, 1075);
             MinimizeBox = false;
             MinimumSize = new Size(626, 1075);
-            Name = "page_des_paramètres";
+            Name = "frmParamètres";
             Text = "page_des_paramètres";
             flpHautPage.ResumeLayout(false);
             flpHautPage.PerformLayout();

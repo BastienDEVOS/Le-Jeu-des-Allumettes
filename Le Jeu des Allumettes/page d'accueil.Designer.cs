@@ -130,6 +130,7 @@
             btnParamètres.TabIndex = 4;
             btnParamètres.Text = "PARAMÈTRES";
             btnParamètres.UseVisualStyleBackColor = false;
+            btnParamètres.Click += btnParamètres_Click;
             // 
             // frmAcceuil
             // 

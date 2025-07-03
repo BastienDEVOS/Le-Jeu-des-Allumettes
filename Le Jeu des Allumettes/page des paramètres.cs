@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Le_Jeu_des_Allumettes
 {
-    public partial class page_des_paramètres : Form
+    public partial class frmParamètres : Form
     {
-        public page_des_paramètres()
+        public frmParamètres()
         {
             InitializeComponent();
         }

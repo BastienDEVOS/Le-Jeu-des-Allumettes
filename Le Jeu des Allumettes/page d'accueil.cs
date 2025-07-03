@@ -11,8 +11,8 @@ namespace Le_Jeu_des_Allumettes
 
         private void frmAcceuil_Load(object sender, EventArgs e)
         {
-            //SoundPlayer player = new SoundPlayer("Ressources\\allumage d'allumette.wav\\");
-            //player.Play();
+            SoundPlayer player = new SoundPlayer("Ressources\\allumage d'allumette.wav");
+            player.Play();
         }
 
         private void btnJouer_Click(object sender, EventArgs e)
@@ -24,6 +24,12 @@ namespace Le_Jeu_des_Allumettes
         {
             frmRègles FrmRègles = new frmRègles();
             FrmRègles.Show();
+        }
+
+        private void btnParamètres_Click(object sender, EventArgs e)
+        {
+            frmParamètres FrmParamètres = new frmParamètres();
+            FrmParamètres.Show();
         }
     }
 }

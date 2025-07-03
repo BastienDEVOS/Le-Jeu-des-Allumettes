@@ -10,19 +10,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="img\Logo-le-jeu-des-allumettes.ico" />
-    <None Remove="Resources\allumage d%27allumette.wav" />
-    <None Remove="Ressources\allumage d%27allumette.wav" />
+    <Compile Remove="img\**" />
+    <Compile Remove="Resources\**" />
+    <EmbeddedResource Remove="img\**" />
+    <EmbeddedResource Remove="Resources\**" />
+    <None Remove="img\**" />
+    <None Remove="Resources\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="img\Logo-le-jeu-des-allumettes.ico">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\allumage d'allumette.wav">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <None Remove="Ressources\allumage d%27allumette.wav" />
+    <None Remove="Ressources\Logo le jeu des allumettes.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include="Ressources\allumage d'allumette.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ressources\Logo le jeu des allumettes.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
