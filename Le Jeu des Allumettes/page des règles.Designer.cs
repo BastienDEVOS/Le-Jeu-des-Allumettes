@@ -100,6 +100,7 @@
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(237, 237, 237);
             ClientSize = new Size(600, 1004);
             Controls.Add(flpHautPage);
             Controls.Add(lblRèglesJeu);

@@ -40,6 +40,14 @@
             trbMusic = new TrackBar();
             lblEffectsSonore = new Label();
             lblMusic = new Label();
+            btnNousContacter = new Button();
+            btnAPropos = new Button();
+            lblNosRéseaux = new Label();
+            btnInsta = new Button();
+            btnSnap = new Button();
+            btnX = new Button();
+            btnAnnuler = new Button();
+            btnConfirmer = new Button();
             flpHautPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogoHaut).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trbEffectsSonore).BeginInit();
@@ -85,15 +93,18 @@
             // 
             // trbEffectsSonore
             // 
-            trbEffectsSonore.Location = new Point(100, 190);
+            trbEffectsSonore.BackColor = SystemColors.Control;
+            trbEffectsSonore.Location = new Point(100, 152);
+            trbEffectsSonore.Maximum = 7;
             trbEffectsSonore.Name = "trbEffectsSonore";
             trbEffectsSonore.Size = new Size(400, 90);
             trbEffectsSonore.TabIndex = 7;
+            trbEffectsSonore.Value = 7;
             // 
             // picMuteEffectsSonore
             // 
             picMuteEffectsSonore.Image = (Image)resources.GetObject("picMuteEffectsSonore.Image");
-            picMuteEffectsSonore.Location = new Point(52, 190);
+            picMuteEffectsSonore.Location = new Point(52, 152);
             picMuteEffectsSonore.Name = "picMuteEffectsSonore";
             picMuteEffectsSonore.Size = new Size(42, 42);
             picMuteEffectsSonore.SizeMode = PictureBoxSizeMode.Zoom;
@@ -103,7 +114,7 @@
             // picSondEffectSonore
             // 
             picSondEffectSonore.Image = (Image)resources.GetObject("picSondEffectSonore.Image");
-            picSondEffectSonore.Location = new Point(506, 190);
+            picSondEffectSonore.Location = new Point(510, 152);
             picSondEffectSonore.Name = "picSondEffectSonore";
             picSondEffectSonore.Size = new Size(42, 42);
             picSondEffectSonore.SizeMode = PictureBoxSizeMode.Zoom;
@@ -113,7 +124,7 @@
             // picSondMusic
             // 
             picSondMusic.Image = (Image)resources.GetObject("picSondMusic.Image");
-            picSondMusic.Location = new Point(506, 457);
+            picSondMusic.Location = new Point(510, 268);
             picSondMusic.Name = "picSondMusic";
             picSondMusic.Size = new Size(42, 42);
             picSondMusic.SizeMode = PictureBoxSizeMode.Zoom;
@@ -123,7 +134,7 @@
             // picMuteMusic
             // 
             picMuteMusic.Image = (Image)resources.GetObject("picMuteMusic.Image");
-            picMuteMusic.Location = new Point(52, 457);
+            picMuteMusic.Location = new Point(52, 268);
             picMuteMusic.Name = "picMuteMusic";
             picMuteMusic.Size = new Size(42, 42);
             picMuteMusic.SizeMode = PictureBoxSizeMode.Zoom;
@@ -132,16 +143,19 @@
             // 
             // trbMusic
             // 
-            trbMusic.Location = new Point(100, 457);
+            trbMusic.Location = new Point(100, 268);
+            trbMusic.Maximum = 7;
             trbMusic.Name = "trbMusic";
             trbMusic.Size = new Size(400, 90);
             trbMusic.TabIndex = 10;
+            trbMusic.Value = 7;
             // 
             // lblEffectsSonore
             // 
             lblEffectsSonore.AutoSize = true;
             lblEffectsSonore.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblEffectsSonore.Location = new Point(204, 144);
+            lblEffectsSonore.ForeColor = Color.FromArgb(35, 41, 49);
+            lblEffectsSonore.Location = new Point(204, 106);
             lblEffectsSonore.Name = "lblEffectsSonore";
             lblEffectsSonore.Size = new Size(193, 32);
             lblEffectsSonore.TabIndex = 13;
@@ -151,17 +165,156 @@
             // 
             lblMusic.AutoSize = true;
             lblMusic.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMusic.Location = new Point(258, 422);
+            lblMusic.ForeColor = Color.FromArgb(35, 41, 49);
+            lblMusic.Location = new Point(258, 233);
             lblMusic.Name = "lblMusic";
             lblMusic.Size = new Size(84, 32);
             lblMusic.TabIndex = 14;
             lblMusic.Text = "Music";
             // 
+            // btnNousContacter
+            // 
+            btnNousContacter.BackColor = Color.FromArgb(214, 73, 38);
+            btnNousContacter.BackgroundImageLayout = ImageLayout.Zoom;
+            btnNousContacter.FlatAppearance.BorderColor = Color.FromArgb(106, 45, 20);
+            btnNousContacter.FlatAppearance.BorderSize = 3;
+            btnNousContacter.FlatStyle = FlatStyle.Flat;
+            btnNousContacter.Font = new Font("Segoe UI Black", 7.5F, FontStyle.Bold);
+            btnNousContacter.ForeColor = Color.FromArgb(35, 41, 49);
+            btnNousContacter.Image = (Image)resources.GetObject("btnNousContacter.Image");
+            btnNousContacter.Location = new Point(52, 393);
+            btnNousContacter.Name = "btnNousContacter";
+            btnNousContacter.Padding = new Padding(5, 0, 0, 0);
+            btnNousContacter.Size = new Size(500, 56);
+            btnNousContacter.TabIndex = 15;
+            btnNousContacter.Text = "Nous contacter";
+            btnNousContacter.TextAlign = ContentAlignment.MiddleRight;
+            btnNousContacter.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnNousContacter.UseVisualStyleBackColor = false;
+            btnNousContacter.Click += btnNousContacter_Click;
+            // 
+            // btnAPropos
+            // 
+            btnAPropos.BackColor = Color.FromArgb(214, 73, 38);
+            btnAPropos.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAPropos.FlatAppearance.BorderColor = Color.FromArgb(106, 45, 20);
+            btnAPropos.FlatAppearance.BorderSize = 3;
+            btnAPropos.FlatStyle = FlatStyle.Flat;
+            btnAPropos.Font = new Font("Segoe UI Black", 7.5F, FontStyle.Bold);
+            btnAPropos.ForeColor = Color.FromArgb(35, 41, 49);
+            btnAPropos.Image = (Image)resources.GetObject("btnAPropos.Image");
+            btnAPropos.Location = new Point(52, 524);
+            btnAPropos.Name = "btnAPropos";
+            btnAPropos.Size = new Size(500, 56);
+            btnAPropos.TabIndex = 16;
+            btnAPropos.Text = "A propos";
+            btnAPropos.TextAlign = ContentAlignment.MiddleRight;
+            btnAPropos.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAPropos.UseVisualStyleBackColor = false;
+            btnAPropos.Click += btnAPropos_Click;
+            // 
+            // lblNosRéseaux
+            // 
+            lblNosRéseaux.AutoSize = true;
+            lblNosRéseaux.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNosRéseaux.ForeColor = Color.FromArgb(35, 41, 49);
+            lblNosRéseaux.Location = new Point(221, 634);
+            lblNosRéseaux.Name = "lblNosRéseaux";
+            lblNosRéseaux.Size = new Size(158, 32);
+            lblNosRéseaux.TabIndex = 17;
+            lblNosRéseaux.Text = "Nos réseaux";
+            // 
+            // btnInsta
+            // 
+            btnInsta.BackgroundImage = (Image)resources.GetObject("btnInsta.BackgroundImage");
+            btnInsta.BackgroundImageLayout = ImageLayout.Zoom;
+            btnInsta.FlatAppearance.BorderColor = Color.FromArgb(106, 45, 20);
+            btnInsta.FlatAppearance.BorderSize = 5;
+            btnInsta.FlatStyle = FlatStyle.Flat;
+            btnInsta.Location = new Point(52, 716);
+            btnInsta.Name = "btnInsta";
+            btnInsta.Size = new Size(100, 100);
+            btnInsta.TabIndex = 18;
+            btnInsta.UseVisualStyleBackColor = true;
+            btnInsta.Click += btnInsta_Click;
+            // 
+            // btnSnap
+            // 
+            btnSnap.BackgroundImage = (Image)resources.GetObject("btnSnap.BackgroundImage");
+            btnSnap.BackgroundImageLayout = ImageLayout.Zoom;
+            btnSnap.FlatAppearance.BorderColor = Color.FromArgb(106, 45, 20);
+            btnSnap.FlatAppearance.BorderSize = 5;
+            btnSnap.FlatStyle = FlatStyle.Flat;
+            btnSnap.Location = new Point(250, 716);
+            btnSnap.Name = "btnSnap";
+            btnSnap.Size = new Size(100, 100);
+            btnSnap.TabIndex = 19;
+            btnSnap.UseVisualStyleBackColor = true;
+            btnSnap.Click += btnSnap_Click;
+            // 
+            // btnX
+            // 
+            btnX.BackgroundImage = (Image)resources.GetObject("btnX.BackgroundImage");
+            btnX.BackgroundImageLayout = ImageLayout.Zoom;
+            btnX.FlatAppearance.BorderColor = Color.FromArgb(106, 45, 20);
+            btnX.FlatAppearance.BorderSize = 5;
+            btnX.FlatStyle = FlatStyle.Flat;
+            btnX.Location = new Point(452, 716);
+            btnX.Name = "btnX";
+            btnX.Size = new Size(100, 100);
+            btnX.TabIndex = 20;
+            btnX.UseVisualStyleBackColor = true;
+            btnX.Click += btnX_Click;
+            // 
+            // btnAnnuler
+            // 
+            btnAnnuler.BackColor = Color.FromArgb(214, 73, 38);
+            btnAnnuler.BackgroundImageLayout = ImageLayout.Zoom;
+            btnAnnuler.FlatAppearance.BorderColor = Color.FromArgb(106, 45, 20);
+            btnAnnuler.FlatAppearance.BorderSize = 3;
+            btnAnnuler.FlatStyle = FlatStyle.Flat;
+            btnAnnuler.Font = new Font("Segoe UI Black", 7.5F, FontStyle.Bold);
+            btnAnnuler.ForeColor = Color.FromArgb(35, 41, 49);
+            btnAnnuler.Location = new Point(52, 908);
+            btnAnnuler.Name = "btnAnnuler";
+            btnAnnuler.Size = new Size(225, 56);
+            btnAnnuler.TabIndex = 21;
+            btnAnnuler.Text = "Annuler";
+            btnAnnuler.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnAnnuler.UseVisualStyleBackColor = false;
+            btnAnnuler.Click += btnAnnuler_Click;
+            // 
+            // btnConfirmer
+            // 
+            btnConfirmer.BackColor = Color.FromArgb(214, 73, 38);
+            btnConfirmer.BackgroundImageLayout = ImageLayout.Zoom;
+            btnConfirmer.FlatAppearance.BorderColor = Color.FromArgb(106, 45, 20);
+            btnConfirmer.FlatAppearance.BorderSize = 3;
+            btnConfirmer.FlatStyle = FlatStyle.Flat;
+            btnConfirmer.Font = new Font("Segoe UI Black", 7.5F, FontStyle.Bold);
+            btnConfirmer.ForeColor = Color.FromArgb(35, 41, 49);
+            btnConfirmer.Location = new Point(327, 908);
+            btnConfirmer.Name = "btnConfirmer";
+            btnConfirmer.Size = new Size(225, 56);
+            btnConfirmer.TabIndex = 22;
+            btnConfirmer.Text = "Confirmer";
+            btnConfirmer.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnConfirmer.UseVisualStyleBackColor = false;
+            // 
             // frmParamètres
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(237, 237, 237);
             ClientSize = new Size(600, 1004);
+            Controls.Add(btnConfirmer);
+            Controls.Add(btnAnnuler);
+            Controls.Add(btnX);
+            Controls.Add(btnSnap);
+            Controls.Add(btnInsta);
+            Controls.Add(lblNosRéseaux);
+            Controls.Add(btnAPropos);
+            Controls.Add(btnNousContacter);
             Controls.Add(lblMusic);
             Controls.Add(lblEffectsSonore);
             Controls.Add(picSondMusic);
@@ -204,5 +357,13 @@
         private TrackBar trbMusic;
         private Label lblEffectsSonore;
         private Label lblMusic;
+        private Button btnNousContacter;
+        private Button btnAPropos;
+        private Label lblNosRéseaux;
+        private Button btnInsta;
+        private Button btnSnap;
+        private Button btnX;
+        private Button btnAnnuler;
+        private Button btnConfirmer;
     }
 }
