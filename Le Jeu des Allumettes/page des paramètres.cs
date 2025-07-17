@@ -19,6 +19,17 @@ namespace Le_Jeu_des_Allumettes
             InitializeComponent();
         }
 
+        private void frmParamètres_Load(object sender, EventArgs e)
+        {
+            trbMusic.Minimum = 0;
+            trbMusic.Maximum = 8;
+            trbEffectsSonore.Minimum = 0;
+            trbEffectsSonore.Maximum = 8;
+
+            trbMusic.Value = (int)(AudioManager.MusicVolume * 8);
+            trbEffectsSonore.Value = (int)(AudioManager.SoundEffectsVolume * 8);
+        }
+
         private void btnNousContacter_Click(object sender, EventArgs e)
         {
             string email = "bastiendevos.perso@gmail.com";
@@ -64,8 +75,15 @@ namespace Le_Jeu_des_Allumettes
                 UseShellExecute = true
             });
         }
+        private void btnConfirmer_Click(object sender, EventArgs e)
+        {
+            AudioManager.MusicVolume = trbMusic.Value * 0.125f;
+            AudioManager.SoundEffectsVolume = trbEffectsSonore.Value * 0.125f;
 
-        private void btnAnnuler_Click(object sender, EventArgs e)
+            AudioManager.ApplyMusicVolume();
+        }
+
+        private void btnRetour_Click(object sender, EventArgs e)
         {
             this.Close();
         }

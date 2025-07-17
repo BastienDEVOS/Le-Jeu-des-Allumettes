@@ -1,6 +1,6 @@
 ﻿namespace Le_Jeu_des_Allumettes
 {
-    partial class frmAcceuil
+    partial class frmAccueil
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAcceuil));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAccueil));
             flpHautPage = new FlowLayoutPanel();
             picLogoHaut = new PictureBox();
             lblTitrePage = new Label();
@@ -132,7 +132,7 @@
             btnParamètres.UseVisualStyleBackColor = false;
             btnParamètres.Click += btnParamètres_Click;
             // 
-            // frmAcceuil
+            // frmAccueil
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -149,9 +149,10 @@
             MaximumSize = new Size(1946, 1315);
             MinimizeBox = false;
             MinimumSize = new Size(1946, 1315);
-            Name = "frmAcceuil";
+            Name = "frmAccueil";
             Text = "page d'accueil";
-            Load += frmAcceuil_Load;
+            FormClosed += frmAccueil_FormClosed;
+            Load += frmAccueil_Load;
             flpHautPage.ResumeLayout(false);
             flpHautPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picLogoHaut).EndInit();

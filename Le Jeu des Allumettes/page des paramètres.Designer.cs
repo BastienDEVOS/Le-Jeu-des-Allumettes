@@ -46,7 +46,7 @@
             btnInsta = new Button();
             btnSnap = new Button();
             btnX = new Button();
-            btnAnnuler = new Button();
+            btnRetour = new Button();
             btnConfirmer = new Button();
             flpHautPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogoHaut).BeginInit();
@@ -95,11 +95,11 @@
             // 
             trbEffectsSonore.BackColor = SystemColors.Control;
             trbEffectsSonore.Location = new Point(100, 152);
-            trbEffectsSonore.Maximum = 7;
+            trbEffectsSonore.Maximum = 8;
             trbEffectsSonore.Name = "trbEffectsSonore";
             trbEffectsSonore.Size = new Size(400, 90);
             trbEffectsSonore.TabIndex = 7;
-            trbEffectsSonore.Value = 7;
+            trbEffectsSonore.Value = 4;
             // 
             // picMuteEffectsSonore
             // 
@@ -144,11 +144,11 @@
             // trbMusic
             // 
             trbMusic.Location = new Point(100, 268);
-            trbMusic.Maximum = 7;
+            trbMusic.Maximum = 8;
             trbMusic.Name = "trbMusic";
             trbMusic.Size = new Size(400, 90);
             trbMusic.TabIndex = 10;
-            trbMusic.Value = 7;
+            trbMusic.Value = 4;
             // 
             // lblEffectsSonore
             // 
@@ -266,23 +266,23 @@
             btnX.UseVisualStyleBackColor = true;
             btnX.Click += btnX_Click;
             // 
-            // btnAnnuler
+            // btnRetour
             // 
-            btnAnnuler.BackColor = Color.FromArgb(214, 73, 38);
-            btnAnnuler.BackgroundImageLayout = ImageLayout.Zoom;
-            btnAnnuler.FlatAppearance.BorderColor = Color.FromArgb(106, 45, 20);
-            btnAnnuler.FlatAppearance.BorderSize = 3;
-            btnAnnuler.FlatStyle = FlatStyle.Flat;
-            btnAnnuler.Font = new Font("Segoe UI Black", 7.5F, FontStyle.Bold);
-            btnAnnuler.ForeColor = Color.FromArgb(35, 41, 49);
-            btnAnnuler.Location = new Point(52, 908);
-            btnAnnuler.Name = "btnAnnuler";
-            btnAnnuler.Size = new Size(225, 56);
-            btnAnnuler.TabIndex = 21;
-            btnAnnuler.Text = "Annuler";
-            btnAnnuler.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnAnnuler.UseVisualStyleBackColor = false;
-            btnAnnuler.Click += btnAnnuler_Click;
+            btnRetour.BackColor = Color.FromArgb(214, 73, 38);
+            btnRetour.BackgroundImageLayout = ImageLayout.Zoom;
+            btnRetour.FlatAppearance.BorderColor = Color.FromArgb(106, 45, 20);
+            btnRetour.FlatAppearance.BorderSize = 3;
+            btnRetour.FlatStyle = FlatStyle.Flat;
+            btnRetour.Font = new Font("Segoe UI Black", 7.5F, FontStyle.Bold);
+            btnRetour.ForeColor = Color.FromArgb(35, 41, 49);
+            btnRetour.Location = new Point(52, 908);
+            btnRetour.Name = "btnRetour";
+            btnRetour.Size = new Size(225, 56);
+            btnRetour.TabIndex = 21;
+            btnRetour.Text = "Retour";
+            btnRetour.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnRetour.UseVisualStyleBackColor = false;
+            btnRetour.Click += btnRetour_Click;
             // 
             // btnConfirmer
             // 
@@ -300,6 +300,7 @@
             btnConfirmer.Text = "Confirmer";
             btnConfirmer.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnConfirmer.UseVisualStyleBackColor = false;
+            btnConfirmer.Click += btnConfirmer_Click;
             // 
             // frmParamètres
             // 
@@ -308,7 +309,7 @@
             BackColor = Color.FromArgb(237, 237, 237);
             ClientSize = new Size(600, 1004);
             Controls.Add(btnConfirmer);
-            Controls.Add(btnAnnuler);
+            Controls.Add(btnRetour);
             Controls.Add(btnX);
             Controls.Add(btnSnap);
             Controls.Add(btnInsta);
@@ -330,7 +331,8 @@
             MinimizeBox = false;
             MinimumSize = new Size(626, 1075);
             Name = "frmParamètres";
-            Text = "page_des_paramètres";
+            Text = "page des paramètres";
+            Load += frmParamètres_Load;
             flpHautPage.ResumeLayout(false);
             flpHautPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picLogoHaut).EndInit();
@@ -363,7 +365,7 @@
         private Button btnInsta;
         private Button btnSnap;
         private Button btnX;
-        private Button btnAnnuler;
+        private Button btnRetour;
         private Button btnConfirmer;
     }
 }

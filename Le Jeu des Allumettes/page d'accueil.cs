@@ -1,45 +1,47 @@
-using NAudio.Wave;
 using System;
 using System.IO;
+using System.Media;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using NAudio.Wave;
 
 namespace Le_Jeu_des_Allumettes
 {
-    public partial class frmAcceuil : Form
+    public partial class frmAccueil : Form
     {
-        private IWavePlayer musicPlayer;
-        private AudioFileReader musicReader;
+        public static WaveOutEvent musicPlayer;
+        public static AudioFileReader musicReader;
 
-        public frmAcceuil()
+
+        public frmAccueil()
         {
             InitializeComponent();
-            this.Load += frmAcceuil_Load;
-            this.FormClosed += frmAcceuil_FormClosed;
         }
 
-        private async void frmAcceuil_Load(object sender, EventArgs e)
+        private void frmAccueil_Load(object sender, EventArgs e)
         {
-            string matchPath = Path.Combine(Application.StartupPath, "Ressources", "allumage d'allumette.wav");
-            using (var matchPlayer = new WaveOutEvent())
-            using (var matchReader = new AudioFileReader(matchPath))
+            // Lecture du son d'allumette (WAV)
+            string fxPath = Path.Combine(Application.StartupPath, "Ressources", "allumage d'allumette.wav");
+
+            using (SoundPlayer fxPlayer = new SoundPlayer(fxPath))
             {
-                matchPlayer.Init(matchReader);
-                matchPlayer.Play();
-                while (matchPlayer.PlaybackState == PlaybackState.Playing)
-                    await Task.Delay(100);
+                fxPlayer.PlaySync(); // Joue le son et bloque jusqu’à la fin
             }
 
+            // Lecture de la musique d’ambiance (MP3, en boucle)
             string musicPath = Path.Combine(Application.StartupPath, "Ressources", "background sound.mp3");
             musicReader = new AudioFileReader(musicPath);
-            musicReader.Volume = 0.1f;
+            musicReader.Volume = AudioManager.MusicVolume;
 
-            var loopStream = new LoopStream(musicReader);
+            var loop = new LoopStream(musicReader);
             musicPlayer = new WaveOutEvent();
-            musicPlayer.Init(loopStream);
+            musicPlayer.Init(loop);
             musicPlayer.Play();
         }
 
-        private void frmAcceuil_FormClosed(object sender, FormClosedEventArgs e)
+
+
+        private void frmAccueil_FormClosed(object sender, FormClosedEventArgs e)
         {
             musicPlayer?.Stop();
             musicPlayer?.Dispose();

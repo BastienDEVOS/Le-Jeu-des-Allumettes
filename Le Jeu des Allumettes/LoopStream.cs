@@ -1,4 +1,6 @@
 ﻿using NAudio.Wave;
+using System.IO;
+using System.Windows.Forms;
 
 public class LoopStream : WaveStream
 {
