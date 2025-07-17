@@ -130,6 +130,8 @@
             MinimumSize = new Size(626, 1175);
             Name = "frmAPropos";
             Text = "page a propos";
+            Deactivate += frmAPropos_Deactivate;
+            Load += frmAPropos_Load;
             flpHautPage.ResumeLayout(false);
             flpHautPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picLogoHaut).EndInit();

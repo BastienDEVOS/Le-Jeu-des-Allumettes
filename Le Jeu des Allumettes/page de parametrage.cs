@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Le_Jeu_des_Allumettes
 {
-    public partial class frmRègles : Form
+    public partial class frmParametrage : Form
     {
-        public frmRègles()
+        public frmParametrage()
         {
             InitializeComponent();
-        }
-
-        private void btnRetour_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void frmRègles_Deactivate(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

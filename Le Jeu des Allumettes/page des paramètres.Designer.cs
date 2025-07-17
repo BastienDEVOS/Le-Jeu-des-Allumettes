@@ -332,6 +332,7 @@
             MinimumSize = new Size(626, 1075);
             Name = "frmParamètres";
             Text = "page des paramètres";
+            Deactivate += frmParamètres_Deactivate;
             Load += frmParamètres_Load;
             flpHautPage.ResumeLayout(false);
             flpHautPage.PerformLayout();

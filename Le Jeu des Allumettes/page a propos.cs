@@ -17,6 +17,11 @@ namespace Le_Jeu_des_Allumettes
             InitializeComponent();
         }
 
+        private void frmAPropos_Load(object sender, EventArgs e)
+        {
+            this.BringToFront();
+        }
+
         private void btnRetour_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -38,8 +43,15 @@ namespace Le_Jeu_des_Allumettes
 
         private void btnTroll_Click(object sender, EventArgs e)
         {
-            frmTroll FrmTroll =new frmTroll();
+            frmTroll FrmTroll = new frmTroll();
             FrmTroll.Show();
+
+            this.Hide();
+        }
+
+        private void frmAPropos_Deactivate(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

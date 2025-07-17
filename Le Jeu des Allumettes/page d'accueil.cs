@@ -50,7 +50,10 @@ namespace Le_Jeu_des_Allumettes
 
         private void btnJouer_Click(object sender, EventArgs e)
         {
+            frmParametrage FrmParametrage = new frmParametrage();
+            FrmParametrage.Show();
 
+            this.Close();
         }
 
         private void brnRègles_Click(object sender, EventArgs e)

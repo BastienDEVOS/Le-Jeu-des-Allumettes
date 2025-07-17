@@ -21,6 +21,11 @@ namespace Le_Jeu_des_Allumettes
         bool canClickToClose = false;
         Random rand = new Random();
 
+        private void frmTroll_Load(object sender, EventArgs e)
+        {
+            this.BringToFront();
+        }
+
         private void btnTroll_MouseMove(object sender, MouseEventArgs e)
         {
             if (canClickToClose) return;
@@ -65,5 +70,12 @@ namespace Le_Jeu_des_Allumettes
             }
         }
 
+        private void frmTroll_Deactivate(object sender, EventArgs e)
+        {
+            if (!canClickToClose)
+            {
+                MessageBox.Show("Non non non, bien essayé… mais t'es coincé ici avec moi tant que t'auras pas réussi à appuyer sur le bouton 😈", "Nice try", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

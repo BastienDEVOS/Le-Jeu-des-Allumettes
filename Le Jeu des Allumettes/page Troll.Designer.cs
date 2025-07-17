@@ -82,10 +82,14 @@
             Controls.Add(picTroll);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
+            MaximumSize = new Size(845, 778);
             MinimizeBox = false;
+            MinimumSize = new Size(845, 778);
             Name = "frmTroll";
             Text = "page Troll";
+            Deactivate += frmTroll_Deactivate;
             FormClosing += FormTroll_FormClosing;
+            Load += frmTroll_Load;
             ((System.ComponentModel.ISupportInitialize)picTroll).EndInit();
             ResumeLayout(false);
             PerformLayout();

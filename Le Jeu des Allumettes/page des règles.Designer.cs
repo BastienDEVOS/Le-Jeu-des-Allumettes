@@ -112,6 +112,7 @@
             MinimumSize = new Size(626, 1075);
             Name = "frmRègles";
             Text = "page des règles";
+            Deactivate += frmRègles_Deactivate;
             flpHautPage.ResumeLayout(false);
             flpHautPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picLogoHaut).EndInit();

@@ -47,6 +47,8 @@ namespace Le_Jeu_des_Allumettes
         {
             frmAPropos FrmAPropos = new frmAPropos();
             FrmAPropos.Show();
+
+            this.Hide();
         }
 
         private void btnInsta_Click(object sender, EventArgs e)
@@ -84,6 +86,11 @@ namespace Le_Jeu_des_Allumettes
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmParamètres_Deactivate(object sender, EventArgs e)
         {
             this.Close();
         }
