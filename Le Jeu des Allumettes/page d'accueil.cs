@@ -53,7 +53,10 @@ namespace Le_Jeu_des_Allumettes
             frmParametrage FrmParametrage = new frmParametrage();
             FrmParametrage.Show();
 
-            this.Close();
+            this.Hide();
+
+            FrmParametrage.FormClosed += (s, args) => this.Show();
+            FrmParametrage.Show();
         }
 
         private void brnRègles_Click(object sender, EventArgs e)

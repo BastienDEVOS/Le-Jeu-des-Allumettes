@@ -24,6 +24,10 @@ namespace Le_Jeu_des_Allumettes
 
         private void btnRetour_Click(object sender, EventArgs e)
         {
+            frmParamètres FrmParamètres = new frmParamètres();
+            FrmParamètres.Show();
+            FrmParamètres.BringToFront();
+
             this.Close();
         }
 
