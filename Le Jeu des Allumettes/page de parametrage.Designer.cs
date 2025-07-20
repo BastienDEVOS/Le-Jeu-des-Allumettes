@@ -242,6 +242,7 @@
             btnJouer.TabIndex = 11;
             btnJouer.Text = "JOUER";
             btnJouer.UseVisualStyleBackColor = false;
+            btnJouer.Click += btnJouer_Click;
             // 
             // nupNbAllumettes
             // 

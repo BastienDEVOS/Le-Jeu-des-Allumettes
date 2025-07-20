@@ -20,15 +20,13 @@ namespace Le_Jeu_des_Allumettes
 
         private void frmAccueil_Load(object sender, EventArgs e)
         {
-            // Lecture du son d'allumette (WAV)
             string fxPath = Path.Combine(Application.StartupPath, "Ressources", "allumage d'allumette.wav");
 
             using (SoundPlayer fxPlayer = new SoundPlayer(fxPath))
             {
-                fxPlayer.PlaySync(); // Joue le son et bloque jusqu’à la fin
+                fxPlayer.PlaySync();
             }
 
-            // Lecture de la musique d’ambiance (MP3, en boucle)
             string musicPath = Path.Combine(Application.StartupPath, "Ressources", "background sound.mp3");
             musicReader = new AudioFileReader(musicPath);
             musicReader.Volume = AudioManager.MusicVolume;

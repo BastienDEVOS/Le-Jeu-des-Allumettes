@@ -18,6 +18,12 @@ namespace Le_Jeu_des_Allumettes
         }
 
         private bool retourClique = false;
+        string pseudoJ1 = "Joueur 1";
+        string pseudoJ2 = "Joueur 2";
+        int Adversaire = 1;
+        int NiveauIA = 1;
+        int NbAllumettes = 0;
+        int AQuiLetour = 0;
 
         private void txtPseudoJ1_TextChanged(object sender, EventArgs e)
         {
@@ -64,6 +70,8 @@ namespace Le_Jeu_des_Allumettes
             txtPseudoJ2.Enabled = false;
 
             btnStartAutre.Text = "IA";
+
+            Adversaire = 2;
         }
 
         private void btn2Joueur_Click(object sender, EventArgs e)
@@ -89,36 +97,48 @@ namespace Le_Jeu_des_Allumettes
             {
                 btnStartAutre.Text = txtPseudoJ2.Text;
             }
+
+            Adversaire = 1;
         }
 
         private void btnNaïf_Click(object sender, EventArgs e)
         {
             btnNaïf.BackColor = Color.FromArgb(214, 73, 38);
             btnConfirmé.BackColor = btnExpert.BackColor = Color.FromArgb(237, 237, 237);
+
+            NiveauIA = 1;
         }
 
         private void btnConfirmé_Click(object sender, EventArgs e)
         {
             btnConfirmé.BackColor = Color.FromArgb(214, 73, 38);
             btnNaïf.BackColor = btnExpert.BackColor = Color.FromArgb(237, 237, 237);
+
+            NiveauIA = 2;
         }
 
         private void btnExpert_Click(object sender, EventArgs e)
         {
             btnExpert.BackColor = Color.FromArgb(214, 73, 38);
             btnNaïf.BackColor = btnConfirmé.BackColor = Color.FromArgb(237, 237, 237);
+
+            NiveauIA = 3;
         }
 
         private void btnStartJ1_Click(object sender, EventArgs e)
         {
             btnStartJ1.BackColor = Color.FromArgb(214, 73, 38);
             btnStartAutre.BackColor = Color.FromArgb(237, 237, 237);
+
+            AQuiLetour = 0;
         }
 
         private void btnStartAutre_Click(object sender, EventArgs e)
         {
             btnStartAutre.BackColor = Color.FromArgb(214, 73, 38);
             btnStartJ1.BackColor = Color.FromArgb(237, 237, 237);
+
+            AQuiLetour = 1;
         }
 
         private void nupNbAllumettes_ValueChanged(object sender, EventArgs e)
@@ -147,6 +167,27 @@ namespace Le_Jeu_des_Allumettes
             {
                 Application.Exit();
             }
+        }
+
+        private void btnJouer_Click(object sender, EventArgs e)
+        {
+            if (txtPseudoJ1.Text != "")
+            {
+                pseudoJ1 = txtPseudoJ1.Text;
+            }
+
+            if (txtPseudoJ2.Text != "")
+            {
+                pseudoJ2 = txtPseudoJ2.Text;
+            }
+
+            NbAllumettes = (int)nupNbAllumettes.Value;
+
+
+            frmJeu FrmJeu = new frmJeu(pseudoJ1, pseudoJ2, Adversaire, NiveauIA, NbAllumettes, AQuiLetour);
+            FrmJeu.Show();
+
+            // this.Hide();
         }
     }
 }
