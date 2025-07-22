@@ -82,16 +82,58 @@ namespace Le_Jeu_des_Allumettes
 
             lblNbAllumettesRestant.Text = "Il reste " + nbAllumettes + " allumettes";
 
+            int pictureBoxWidth = 0;
+
             for (int i = 0; i < nbAllumettes; i++)
             {
                 PictureBox pb = new PictureBox();
-                pb.Width = 200;
-                pb.Height = 400;
+
+                if (nbAllumettes <= 9)
+                {
+                    pb.Width = 200;
+                    pb.Height = 400;
+                    pictureBoxWidth = 200;
+                    lblTopMargin.Size = new Size(1840, 0);
+                }
+                else
+                {
+                    pb.Width = 100;
+                    pb.Height = 200;
+                    pictureBoxWidth = 100;
+                }
+
                 pb.SizeMode = PictureBoxSizeMode.Zoom;
                 pb.Image = Image.FromFile("Ressources/allumette.png");
-                pb.Margin = new Padding(5);
+                pb.Margin = new Padding(0);
 
                 flpAffichageAllumettes.Controls.Add(pb);
+            }
+
+            int LeftMArginPictureBox1 = 920 - nbAllumettes * pictureBoxWidth / 2;
+
+            var first = flpAffichageAllumettes.Controls[1] as PictureBox;
+            if (first != null)
+            {
+                first.Margin = new Padding(LeftMArginPictureBox1, first.Margin.Top, first.Margin.Right, first.Margin.Bottom);
+            }
+
+            if (nbAllumettes >= 19)
+            {
+                int LeftMArginPictureBox19 = 920 - (nbAllumettes - 18) * pictureBoxWidth / 2;
+
+                var first1 = flpAffichageAllumettes.Controls[1] as PictureBox;
+                if (first1 != null)
+                {
+                    first1.Margin = new Padding(20, 0, 0, 0); // tu réappliques la marge calculée avant
+                }
+
+                var nineteen = flpAffichageAllumettes.Controls[19] as PictureBox;
+                if (nineteen != null)
+                {
+                    nineteen.Margin = new Padding(LeftMArginPictureBox19, 0, 0, 0);
+
+                    lblTopMargin.Size = new Size(1840, 0);
+                }
             }
         }
 

@@ -36,6 +36,7 @@
             picInterogation = new PictureBox();
             lblNbAllumettesRestant = new Label();
             flpAffichageAllumettes = new FlowLayoutPanel();
+            lblTopMargin = new Label();
             lblCombientAllumettes = new Label();
             btn1 = new Button();
             btn2 = new Button();
@@ -46,6 +47,7 @@
             ((System.ComponentModel.ISupportInitialize)picLogoHaut).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picEngrenage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picInterogation).BeginInit();
+            flpAffichageAllumettes.SuspendLayout();
             SuspendLayout();
             // 
             // flpHautPage
@@ -116,10 +118,21 @@
             // 
             // flpAffichageAllumettes
             // 
+            flpAffichageAllumettes.BackColor = Color.FromArgb(237, 237, 237);
+            flpAffichageAllumettes.Controls.Add(lblTopMargin);
             flpAffichageAllumettes.Location = new Point(40, 330);
             flpAffichageAllumettes.Name = "flpAffichageAllumettes";
             flpAffichageAllumettes.Size = new Size(1840, 400);
             flpAffichageAllumettes.TabIndex = 6;
+            // 
+            // lblTopMargin
+            // 
+            lblTopMargin.BackColor = Color.FromArgb(237, 237, 237);
+            lblTopMargin.Location = new Point(0, 0);
+            lblTopMargin.Margin = new Padding(0);
+            lblTopMargin.Name = "lblTopMargin";
+            lblTopMargin.Size = new Size(1840, 50);
+            lblTopMargin.TabIndex = 0;
             // 
             // lblCombientAllumettes
             // 
@@ -233,6 +246,7 @@
             ((System.ComponentModel.ISupportInitialize)picLogoHaut).EndInit();
             ((System.ComponentModel.ISupportInitialize)picEngrenage).EndInit();
             ((System.ComponentModel.ISupportInitialize)picInterogation).EndInit();
+            flpAffichageAllumettes.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -252,5 +266,6 @@
         private Button btn3;
         private Button btnJouer;
         private Label lblTest;
+        private Label lblTopMargin;
     }
 }
