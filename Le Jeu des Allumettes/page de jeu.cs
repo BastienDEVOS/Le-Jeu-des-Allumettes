@@ -44,10 +44,18 @@ namespace Le_Jeu_des_Allumettes
 
         private void frmJeu_Load(object sender, EventArgs e)
         {
+
+            if (nbAllumettes <= 0)
+            {
+                MessageBox.Show("Le jeu est terminé ! " + (aQuiLeTour % 2 == 0 ? pseudoJ1 : pseudoJ2) + " a gagné !", "Fin du jeu", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+                return;
+            }
+
             if (nbAllumettes <= 3)
             {
                 btn3.Enabled = false;
-                btn3.BackColor =  Color.FromArgb(237, 237, 237);
+                btn3.BackColor = Color.FromArgb(237, 237, 237);
                 btn3.ForeColor = Color.FromArgb(217, 217, 217);
                 btn3.FlatAppearance.BorderColor = Color.FromArgb(150, 150, 150);
 
@@ -124,7 +132,7 @@ namespace Le_Jeu_des_Allumettes
                 var first1 = flpAffichageAllumettes.Controls[1] as PictureBox;
                 if (first1 != null)
                 {
-                    first1.Margin = new Padding(20, 0, 0, 0); // tu réappliques la marge calculée avant
+                    first1.Margin = new Padding(20, 0, 0, 0);
                 }
 
                 var nineteen = flpAffichageAllumettes.Controls[19] as PictureBox;
@@ -133,6 +141,40 @@ namespace Le_Jeu_des_Allumettes
                     nineteen.Margin = new Padding(LeftMArginPictureBox19, 0, 0, 0);
 
                     lblTopMargin.Size = new Size(1840, 0);
+                }
+            }
+
+            if (aQuiLeTour % 2 != 0 && adversaire == 2)
+            {
+
+                Random random = new Random();
+                int IANbAllumette;
+
+                switch (niveauIA)
+                {
+                    case 1:
+                        if (nbAllumettes <= 3)
+                        {
+                            IANbAllumette = random.Next(1, nbAllumettes);
+                        }
+                        else
+                        {
+                            IANbAllumette = random.Next(1, 4);
+                        }
+                        MessageBox.Show("L'IA a choisi de retirer " + IANbAllumette + " allumette(s).", "Tour de l'IA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        nbAllumettes -= IANbAllumette;
+                        frmJeu frmJeu = new frmJeu(pseudoJ1, pseudoJ2, adversaire, niveauIA, nbAllumettes, aQuiLeTour + 1);
+                        frmJeu.Show();
+                        this.Close();
+                        break;
+                    case 2:
+                        //Je sais plus trop ce que je voulais faire;
+                        break;
+                    case 3:
+                        //On cherche a ce que le nbAllumette soit un une solution de 5+4**x
+                        break;
+                    default:
+                        return;
                 }
             }
         }
@@ -181,12 +223,6 @@ namespace Le_Jeu_des_Allumettes
             aQuiLeTour++;
             nbAllumettes -= NbAllumettesAEnlever;
 
-            if (nbAllumettes <= 0)
-            {
-                MessageBox.Show("Le jeu est terminé ! " + (aQuiLeTour % 2 == 0 ? pseudoJ1 : pseudoJ2) + " a gagné !", "Fin du jeu", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
-                return;
-            }
             frmJeu frmJeu = new frmJeu(pseudoJ1, pseudoJ2, adversaire, niveauIA, nbAllumettes, aQuiLeTour);
             frmJeu.Show();
 

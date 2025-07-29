@@ -28,6 +28,7 @@ namespace Le_Jeu_des_Allumettes
         private void txtPseudoJ1_TextChanged(object sender, EventArgs e)
         {
             btnStartJ1.Text = txtPseudoJ1.Text;
+            pseudoJ1 = txtPseudoJ1.Text;
         }
 
         private void txtPseudoJ1_Leave(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace Le_Jeu_des_Allumettes
             if (btnStartJ1.Text == "")
             {
                 btnStartJ1.Text = "Joueur 1";
+                pseudoJ1 = "Joueur 1";
             }
         }
 
@@ -42,6 +44,7 @@ namespace Le_Jeu_des_Allumettes
         {
             btnStartAutre.Text = txtPseudoJ2.Text;
             btn2Joueur.Text = txtPseudoJ2.Text;
+            pseudoJ2 = txtPseudoJ2.Text;
         }
 
         private void txtPseudoJ2_Leave(object sender, EventArgs e)
@@ -50,6 +53,7 @@ namespace Le_Jeu_des_Allumettes
             {
                 btnStartAutre.Text = "Joueur 2";
                 btn2Joueur.Text = "Joueur 2";
+                pseudoJ2 = "Joueur 2";
             }
         }
 
@@ -72,6 +76,7 @@ namespace Le_Jeu_des_Allumettes
             btnStartAutre.Text = "IA";
 
             Adversaire = 2;
+            pseudoJ2 = "IA";
         }
 
         private void btn2Joueur_Click(object sender, EventArgs e)
@@ -92,10 +97,12 @@ namespace Le_Jeu_des_Allumettes
             if (txtPseudoJ2.Text == "")
             {
                 btnStartAutre.Text = "Joueur 2";
+                pseudoJ2 = "Joueur 2";
             }
             else
             {
                 btnStartAutre.Text = txtPseudoJ2.Text;
+                pseudoJ2 = txtPseudoJ2.Text;
             }
 
             Adversaire = 1;
@@ -176,7 +183,7 @@ namespace Le_Jeu_des_Allumettes
                 pseudoJ1 = txtPseudoJ1.Text;
             }
 
-            if (txtPseudoJ2.Text != "")
+            if (txtPseudoJ2.Text != "" && Adversaire == 1)
             {
                 pseudoJ2 = txtPseudoJ2.Text;
             }
@@ -186,8 +193,6 @@ namespace Le_Jeu_des_Allumettes
 
             frmJeu FrmJeu = new frmJeu(pseudoJ1, pseudoJ2, Adversaire, NiveauIA, NbAllumettes, AQuiLetour);
             FrmJeu.Show();
-
-            // this.Hide();
         }
     }
 }
