@@ -161,7 +161,7 @@ namespace Le_Jeu_des_Allumettes
                         {
                             IANbAllumette = random.Next(1, 4);
                         }
-                        MessageBox.Show("L'IA a choisi de retirer " + IANbAllumette + " allumette(s).", "Tour de l'IA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("L'IA a choisi de retirer " + IANbAllumette + " allumette(s).", "Tour de l'IA Naïf", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         nbAllumettes -= IANbAllumette;
                         frmJeu frmJeu = new frmJeu(pseudoJ1, pseudoJ2, adversaire, niveauIA, nbAllumettes, aQuiLeTour + 1);
                         frmJeu.Show();
@@ -171,8 +171,32 @@ namespace Le_Jeu_des_Allumettes
                         //Je sais plus trop ce que je voulais faire;
                         break;
                     case 3:
-                        //On cherche a ce que le nbAllumette soit un une solution de 5+4**x
+                        IANbAllumette = -1;
+
+                        for (int x = 0; x <= 10; x++)
+                        {
+                            int cible = 1 + 4 * x;
+                            int tentative = nbAllumettes - cible;
+
+                            if (tentative >= 1 && tentative <= 3)
+                            {
+                                IANbAllumette = tentative;
+                                break;
+                            }
+                        }
+
+                        if (IANbAllumette == -1)
+                        {
+                            IANbAllumette = Math.Min(nbAllumettes, new Random().Next(1, Math.Min(4, nbAllumettes + 1)));
+                        }
+
+                        MessageBox.Show("L'IA a choisi de retirer " + IANbAllumette + " allumette(s).", "Tour de l'IA Expert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        nbAllumettes -= IANbAllumette;
+                        frmJeu FrmJeu = new frmJeu(pseudoJ1, pseudoJ2, adversaire, niveauIA, nbAllumettes, aQuiLeTour + 1);
+                        FrmJeu.Show();
+                        this.Close();
                         break;
+
                     default:
                         return;
                 }
