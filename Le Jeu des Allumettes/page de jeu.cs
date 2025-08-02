@@ -168,7 +168,36 @@ namespace Le_Jeu_des_Allumettes
                         this.Close();
                         break;
                     case 2:
-                        //Je sais plus trop ce que je voulais faire;
+                        if (nbAllumettes > 10)
+                        {
+                            IANbAllumette = random.Next(1, Math.Min(4, nbAllumettes + 1));
+                        }
+                        else
+                        {
+                            IANbAllumette = -1;
+                            for (int x = 0; x <= 20; x++)
+                            {
+                                int cible = 1 + 4 * x;
+                                int tentative = nbAllumettes - cible;
+
+                                if (tentative >= 1 && tentative <= 3)
+                                {
+                                    IANbAllumette = tentative;
+                                    break;
+                                }
+                            }
+
+                            if (IANbAllumette == -1)
+                            {
+                                IANbAllumette = random.Next(1, Math.Min(4, nbAllumettes + 1));
+                            }
+                        }
+
+                        MessageBox.Show("L'IA a choisi de retirer " + IANbAllumette + " allumette(s).", "Tour de l'IA Intermédiaire", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        nbAllumettes -= IANbAllumette;
+                        frmJeu FrmJeu2 = new frmJeu(pseudoJ1, pseudoJ2, adversaire, niveauIA, nbAllumettes, aQuiLeTour + 1);
+                        FrmJeu2.Show();
+                        this.Close();
                         break;
                     case 3:
                         IANbAllumette = -1;
