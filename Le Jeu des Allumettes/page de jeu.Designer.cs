@@ -110,11 +110,11 @@
             lblNbAllumettesRestant.AutoSize = true;
             lblNbAllumettesRestant.Font = new Font("Segoe UI Black", 19.875F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblNbAllumettesRestant.ForeColor = Color.FromArgb(35, 41, 49);
-            lblNbAllumettesRestant.Location = new Point(677, 219);
+            lblNbAllumettesRestant.Location = new Point(702, 219);
             lblNbAllumettesRestant.Name = "lblNbAllumettesRestant";
-            lblNbAllumettesRestant.Size = new Size(566, 71);
+            lblNbAllumettesRestant.Size = new Size(515, 71);
             lblNbAllumettesRestant.TabIndex = 5;
-            lblNbAllumettesRestant.Text = "Il reste ... allumettes";
+            lblNbAllumettesRestant.Text = "Il reste 1 allumette";
             // 
             // flpAffichageAllumettes
             // 
@@ -141,9 +141,9 @@
             lblCombientAllumettes.ForeColor = Color.FromArgb(35, 41, 49);
             lblCombientAllumettes.Location = new Point(382, 807);
             lblCombientAllumettes.Name = "lblCombientAllumettes";
-            lblCombientAllumettes.Size = new Size(1157, 71);
+            lblCombientAllumettes.Size = new Size(1135, 71);
             lblCombientAllumettes.TabIndex = 7;
-            lblCombientAllumettes.Text = "Combient d’allumettes voulez vous enlever";
+            lblCombientAllumettes.Text = "Combien d’allumettes voulez vous enlever";
             // 
             // btn1
             // 
@@ -218,8 +218,7 @@
             // 
             // frmJeu
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(237, 237, 237);
             ClientSize = new Size(1920, 1244);
             Controls.Add(lblTest);

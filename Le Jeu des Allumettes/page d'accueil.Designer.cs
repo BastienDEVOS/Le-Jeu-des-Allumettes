@@ -134,8 +134,7 @@
             // 
             // frmAccueil
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(237, 237, 237);
             ClientSize = new Size(1920, 1244);
             Controls.Add(btnParamètres);

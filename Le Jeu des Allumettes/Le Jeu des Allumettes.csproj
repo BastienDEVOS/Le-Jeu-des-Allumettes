@@ -7,6 +7,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Ressources\Logo-le-jeu-des-allumettes.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
@@ -62,6 +63,7 @@
     <Content Include="Ressources\Logo le jeu des allumettes.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Ressources\Logo-le-jeu-des-allumettes.ico" />
   </ItemGroup>
 
   <ItemGroup>

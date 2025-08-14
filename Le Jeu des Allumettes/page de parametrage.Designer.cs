@@ -121,9 +121,9 @@
             btn2Joueur.FlatStyle = FlatStyle.Flat;
             btn2Joueur.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold);
             btn2Joueur.ForeColor = Color.FromArgb(35, 41, 49);
-            btn2Joueur.Location = new Point(80, 581);
+            btn2Joueur.Location = new Point(81, 581);
             btn2Joueur.Name = "btn2Joueur";
-            btn2Joueur.Size = new Size(375, 100);
+            btn2Joueur.Size = new Size(374, 100);
             btn2Joueur.TabIndex = 4;
             btn2Joueur.Text = "Joueur 2";
             btn2Joueur.UseVisualStyleBackColor = false;
@@ -137,9 +137,9 @@
             btnIA.FlatStyle = FlatStyle.Flat;
             btnIA.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold);
             btnIA.ForeColor = Color.FromArgb(35, 41, 49);
-            btnIA.Location = new Point(505, 581);
+            btnIA.Location = new Point(504, 581);
             btnIA.Name = "btnIA";
-            btnIA.Size = new Size(375, 100);
+            btnIA.Size = new Size(374, 100);
             btnIA.TabIndex = 5;
             btnIA.Text = "IA";
             btnIA.UseVisualStyleBackColor = false;
@@ -171,7 +171,7 @@
             btnConfirmé.FlatStyle = FlatStyle.Flat;
             btnConfirmé.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold);
             btnConfirmé.ForeColor = Color.FromArgb(217, 217, 217);
-            btnConfirmé.Location = new Point(1315, 581);
+            btnConfirmé.Location = new Point(1316, 581);
             btnConfirmé.Name = "btnConfirmé";
             btnConfirmé.Size = new Size(250, 100);
             btnConfirmé.TabIndex = 7;
@@ -206,7 +206,7 @@
             btnStartAutre.ForeColor = Color.FromArgb(35, 41, 49);
             btnStartAutre.Location = new Point(1465, 831);
             btnStartAutre.Name = "btnStartAutre";
-            btnStartAutre.Size = new Size(375, 100);
+            btnStartAutre.Size = new Size(374, 100);
             btnStartAutre.TabIndex = 9;
             btnStartAutre.Text = "Joueur 2";
             btnStartAutre.UseVisualStyleBackColor = false;
@@ -222,7 +222,7 @@
             btnStartJ1.ForeColor = Color.FromArgb(35, 41, 49);
             btnStartJ1.Location = new Point(1040, 831);
             btnStartJ1.Name = "btnStartJ1";
-            btnStartJ1.Size = new Size(375, 100);
+            btnStartJ1.Size = new Size(374, 100);
             btnStartJ1.TabIndex = 10;
             btnStartJ1.Text = "Joueur 1";
             btnStartJ1.UseVisualStyleBackColor = false;
@@ -236,7 +236,7 @@
             btnJouer.FlatStyle = FlatStyle.Flat;
             btnJouer.Font = new Font("Segoe UI Black", 20F, FontStyle.Bold);
             btnJouer.ForeColor = Color.FromArgb(35, 41, 49);
-            btnJouer.Location = new Point(1090, 1075);
+            btnJouer.Location = new Point(1089, 1075);
             btnJouer.Name = "btnJouer";
             btnJouer.Size = new Size(500, 100);
             btnJouer.TabIndex = 11;
@@ -263,7 +263,7 @@
             lblPseudoJ1.AutoSize = true;
             lblPseudoJ1.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold);
             lblPseudoJ1.ForeColor = Color.FromArgb(35, 41, 49);
-            lblPseudoJ1.Location = new Point(80, 286);
+            lblPseudoJ1.Location = new Point(81, 285);
             lblPseudoJ1.Name = "lblPseudoJ1";
             lblPseudoJ1.Size = new Size(326, 45);
             lblPseudoJ1.TabIndex = 13;
@@ -274,7 +274,7 @@
             lblAdversaire.AutoSize = true;
             lblAdversaire.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold);
             lblAdversaire.ForeColor = Color.FromArgb(35, 41, 49);
-            lblAdversaire.Location = new Point(80, 536);
+            lblAdversaire.Location = new Point(81, 536);
             lblAdversaire.Name = "lblAdversaire";
             lblAdversaire.Size = new Size(446, 45);
             lblAdversaire.TabIndex = 14;
@@ -285,7 +285,7 @@
             lblNbAllumettes.AutoSize = true;
             lblNbAllumettes.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold);
             lblNbAllumettes.ForeColor = Color.FromArgb(35, 41, 49);
-            lblNbAllumettes.Location = new Point(80, 786);
+            lblNbAllumettes.Location = new Point(81, 786);
             lblNbAllumettes.Name = "lblNbAllumettes";
             lblNbAllumettes.Size = new Size(355, 45);
             lblNbAllumettes.TabIndex = 15;
@@ -296,7 +296,7 @@
             lblPseudoJ2.AutoSize = true;
             lblPseudoJ2.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold);
             lblPseudoJ2.ForeColor = Color.FromArgb(35, 41, 49);
-            lblPseudoJ2.Location = new Point(1040, 286);
+            lblPseudoJ2.Location = new Point(1040, 285);
             lblPseudoJ2.Name = "lblPseudoJ2";
             lblPseudoJ2.Size = new Size(330, 45);
             lblPseudoJ2.TabIndex = 18;
@@ -329,9 +329,9 @@
             pnlContourPseudoJ1.BackColor = Color.FromArgb(106, 45, 20);
             pnlContourPseudoJ1.BorderStyle = BorderStyle.FixedSingle;
             pnlContourPseudoJ1.Controls.Add(txtPseudoJ1);
-            pnlContourPseudoJ1.Location = new Point(80, 331);
+            pnlContourPseudoJ1.Location = new Point(81, 332);
             pnlContourPseudoJ1.Name = "pnlContourPseudoJ1";
-            pnlContourPseudoJ1.Size = new Size(800, 100);
+            pnlContourPseudoJ1.Size = new Size(800, 101);
             pnlContourPseudoJ1.TabIndex = 19;
             // 
             // pnlContourPseudoJ2
@@ -339,9 +339,9 @@
             pnlContourPseudoJ2.BackColor = Color.FromArgb(106, 45, 20);
             pnlContourPseudoJ2.BorderStyle = BorderStyle.FixedSingle;
             pnlContourPseudoJ2.Controls.Add(txtPseudoJ2);
-            pnlContourPseudoJ2.Location = new Point(1040, 331);
+            pnlContourPseudoJ2.Location = new Point(1040, 332);
             pnlContourPseudoJ2.Name = "pnlContourPseudoJ2";
-            pnlContourPseudoJ2.Size = new Size(800, 100);
+            pnlContourPseudoJ2.Size = new Size(800, 101);
             pnlContourPseudoJ2.TabIndex = 20;
             // 
             // txtPseudoJ2
@@ -350,7 +350,7 @@
             txtPseudoJ2.BorderStyle = BorderStyle.None;
             txtPseudoJ2.Font = new Font("Segoe UI Black", 24F, FontStyle.Bold);
             txtPseudoJ2.ForeColor = Color.FromArgb(35, 41, 49);
-            txtPseudoJ2.Location = new Point(4, 4);
+            txtPseudoJ2.Location = new Point(4, 5);
             txtPseudoJ2.Margin = new Padding(0);
             txtPseudoJ2.MaximumSize = new Size(790, 90);
             txtPseudoJ2.MinimumSize = new Size(790, 90);
@@ -366,15 +366,15 @@
             pnlContoutNUP.BackColor = Color.FromArgb(106, 45, 20);
             pnlContoutNUP.BorderStyle = BorderStyle.FixedSingle;
             pnlContoutNUP.Controls.Add(nupNbAllumettes);
-            pnlContoutNUP.Location = new Point(80, 831);
+            pnlContoutNUP.Location = new Point(81, 831);
             pnlContoutNUP.Name = "pnlContoutNUP";
-            pnlContoutNUP.Size = new Size(800, 100);
+            pnlContoutNUP.Size = new Size(800, 101);
             pnlContoutNUP.TabIndex = 21;
             // 
             // pnlBarreCentral
             // 
             pnlBarreCentral.BackColor = Color.FromArgb(106, 45, 20);
-            pnlBarreCentral.Location = new Point(960, 211);
+            pnlBarreCentral.Location = new Point(959, 211);
             pnlBarreCentral.Name = "pnlBarreCentral";
             pnlBarreCentral.Size = new Size(10, 800);
             pnlBarreCentral.TabIndex = 22;
@@ -408,10 +408,9 @@
             // 
             // frmParametrage
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(237, 237, 237);
-            ClientSize = new Size(1920, 1244);
+            ClientSize = new Size(1919, 1240);
             Controls.Add(btnRetour);
             Controls.Add(lblErreurNBAllumettes);
             Controls.Add(pnlBarreCentral);
@@ -433,11 +432,12 @@
             Controls.Add(btnIA);
             Controls.Add(btn2Joueur);
             Controls.Add(flpHautPage);
+            FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            MaximumSize = new Size(1946, 1315);
+            MaximumSize = new Size(1945, 1311);
             MinimizeBox = false;
-            MinimumSize = new Size(1946, 1315);
+            MinimumSize = new Size(1945, 1272);
             Name = "frmParametrage";
             Text = "page de parametrage";
             FormClosing += frmParametres_FormClosing;

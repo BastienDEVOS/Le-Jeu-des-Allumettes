@@ -70,7 +70,7 @@
             flpHautPage.Controls.Add(lblTitrePage);
             flpHautPage.Location = new Point(0, 0);
             flpHautPage.Name = "flpHautPage";
-            flpHautPage.Size = new Size(600, 75);
+            flpHautPage.Size = new Size(601, 76);
             flpHautPage.TabIndex = 5;
             // 
             // picLogoHaut
@@ -79,7 +79,7 @@
             picLogoHaut.Location = new Point(0, 0);
             picLogoHaut.Margin = new Padding(0);
             picLogoHaut.Name = "picLogoHaut";
-            picLogoHaut.Size = new Size(75, 75);
+            picLogoHaut.Size = new Size(75, 76);
             picLogoHaut.SizeMode = PictureBoxSizeMode.Zoom;
             picLogoHaut.TabIndex = 0;
             picLogoHaut.TabStop = false;
@@ -89,8 +89,8 @@
             lblTitrePage.AutoSize = true;
             lblTitrePage.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold);
             lblTitrePage.ForeColor = Color.FromArgb(35, 41, 49);
-            lblTitrePage.Location = new Point(250, 22);
-            lblTitrePage.Margin = new Padding(175, 22, 3, 0);
+            lblTitrePage.Location = new Point(251, 22);
+            lblTitrePage.Margin = new Padding(176, 22, 3, 0);
             lblTitrePage.Name = "lblTitrePage";
             lblTitrePage.Size = new Size(100, 32);
             lblTitrePage.TabIndex = 1;
@@ -98,18 +98,17 @@
             // 
             // frmRègles
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(237, 237, 237);
-            ClientSize = new Size(600, 1004);
+            ClientSize = new Size(599, 1000);
             Controls.Add(flpHautPage);
             Controls.Add(lblRèglesJeu);
             Controls.Add(btnRetour);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximizeBox = false;
-            MaximumSize = new Size(626, 1075);
+            MaximumSize = new Size(625, 1071);
             MinimizeBox = false;
-            MinimumSize = new Size(626, 1075);
+            MinimumSize = new Size(625, 1071);
             Name = "frmRègles";
             Text = "page des règles";
             Deactivate += frmRègles_Deactivate;

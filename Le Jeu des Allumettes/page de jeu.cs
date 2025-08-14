@@ -21,6 +21,8 @@ namespace Le_Jeu_des_Allumettes
         private int nbAllumettes;
         private int aQuiLeTour;
         int NbAllumettesAEnlever = 0;
+        int screenWidth = Screen.PrimaryScreen.Bounds.Width;
+        int screenHeight = Screen.PrimaryScreen.Bounds.Height;
 
         public frmJeu(string pseudoJ1, string pseudoJ2, int adversaire, int niveauIA, int nbAllumettes, int aQuiLeTour)
         {
@@ -32,19 +34,19 @@ namespace Le_Jeu_des_Allumettes
             this.niveauIA = niveauIA;
             this.nbAllumettes = nbAllumettes;
             this.aQuiLeTour = aQuiLeTour;
+            
         }
 
 
         private void CenterLabelInFlow()
         {
-            int targetLeftMargin = 810 - lblTitrePage.Width / 2;
+            int targetLeftMargin = 810 * - lblTitrePage.Width / 2;
 
             lblTitrePage.Margin = new Padding(targetLeftMargin, lblTitrePage.Margin.Top, lblTitrePage.Margin.Right, lblTitrePage.Margin.Bottom);
         }
 
         private void frmJeu_Load(object sender, EventArgs e)
         {
-
             if (nbAllumettes <= 0)
             {
                 MessageBox.Show("Le jeu est terminé ! " + (aQuiLeTour % 2 == 0 ? pseudoJ1 : pseudoJ2) + " a gagné !", "Fin du jeu", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -68,7 +70,7 @@ namespace Le_Jeu_des_Allumettes
                 }
             }
 
-            lblTest.Text = "Pseudo du joueur 1 : " + pseudoJ1 + "\nPseudo du joueur 2 : " + pseudoJ2 + "\nAdversaire : " + adversaire + "\nNiveau de l'IA : " + niveauIA + "\nQui commence : " + aQuiLeTour + "\nNombre d'allumettes : " + nbAllumettes;
+            lblTest.Text = "Pseudo du joueur 1 : " + pseudoJ1 + "\nPseudo du joueur 2 : " + pseudoJ2 + "\nAdversaire : " + adversaire + "\nNiveau de l'IA : " + niveauIA + "\nQui commence : " + aQuiLeTour + "\nNombre d'allumettes : " + nbAllumettes + "\nscreen wide" + screenWidth + "\nscreen height" + screenHeight;
 
             if (aQuiLeTour % 2 == 0)
             {
@@ -88,7 +90,10 @@ namespace Le_Jeu_des_Allumettes
 
             CenterLabelInFlow();
 
-            lblNbAllumettesRestant.Text = "Il reste " + nbAllumettes + " allumettes";
+            if (nbAllumettes != 1)
+            {
+                lblNbAllumettesRestant.Text = "Il reste " + nbAllumettes + " allumettes";
+            }
 
             int pictureBoxWidth = 0;
 

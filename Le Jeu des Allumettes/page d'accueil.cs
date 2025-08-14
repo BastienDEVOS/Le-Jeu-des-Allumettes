@@ -12,7 +12,6 @@ namespace Le_Jeu_des_Allumettes
         public static WaveOutEvent musicPlayer;
         public static AudioFileReader musicReader;
 
-
         public frmAccueil()
         {
             InitializeComponent();
@@ -20,6 +19,12 @@ namespace Le_Jeu_des_Allumettes
 
         private void frmAccueil_Load(object sender, EventArgs e)
         {
+            if (Screen.PrimaryScreen.Bounds.Width < 1946 || Screen.PrimaryScreen.Bounds.Height < 1315)
+            {
+                MessageBox.Show("Votre résolution d'écran est trop faile, le jeu ne pourra pas s'afficher correctement. \nSi vous voulez pouvoir jouer aller dans les paramètres puis Système > écran, changer la votre resolution d'écran actuel par 2880x1800 puis relancer le jeu ", "Avertissement", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                this.Close();
+            }
+
             string fxPath = Path.Combine(Application.StartupPath, "Ressources", "allumage d'allumette.wav");
 
             using (SoundPlayer fxPlayer = new SoundPlayer(fxPath))
@@ -36,8 +41,6 @@ namespace Le_Jeu_des_Allumettes
             musicPlayer.Init(loop);
             musicPlayer.Play();
         }
-
-
 
         private void frmAccueil_FormClosed(object sender, FormClosedEventArgs e)
         {
