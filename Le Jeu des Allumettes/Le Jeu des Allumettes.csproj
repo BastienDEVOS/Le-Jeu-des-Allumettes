@@ -21,8 +21,12 @@
 
   <ItemGroup>
     <None Remove="Ressources\allumage d%27allumette.wav" />
+    <None Remove="Ressources\allumette qui brule.gif" />
+    <None Remove="Ressources\allumette qui brulle.gif" />
     <None Remove="Ressources\allumette.png" />
+    <None Remove="Ressources\allumette_test.gif" />
     <None Remove="Ressources\background sound.mp3" />
+    <None Remove="Ressources\brulage d%27allumage.wav" />
     <None Remove="Ressources\iconFrmTroll.ico" />
     <None Remove="Ressources\Logo le jeu des allumettes.png" />
   </ItemGroup>
@@ -51,6 +55,9 @@
     <Content Include="Ressources\allumage d'allumette.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Ressources\allumette qui brule.gif">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Ressources\allumette.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -64,6 +71,12 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Ressources\Logo-le-jeu-des-allumettes.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Ressources\brulage d'allumage.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

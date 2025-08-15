@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,13 +35,13 @@ namespace Le_Jeu_des_Allumettes
             this.niveauIA = niveauIA;
             this.nbAllumettes = nbAllumettes;
             this.aQuiLeTour = aQuiLeTour;
-            
+
         }
 
 
         private void CenterLabelInFlow()
         {
-            int targetLeftMargin = 810 * - lblTitrePage.Width / 2;
+            int targetLeftMargin = 810 * -lblTitrePage.Width / 2;
 
             lblTitrePage.Margin = new Padding(targetLeftMargin, lblTitrePage.Margin.Top, lblTitrePage.Margin.Right, lblTitrePage.Margin.Bottom);
         }
@@ -168,6 +169,9 @@ namespace Le_Jeu_des_Allumettes
                         }
                         MessageBox.Show("L'IA a choisi de retirer " + IANbAllumette + " allumette(s).", "Tour de l'IA Naïf", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         nbAllumettes -= IANbAllumette;
+
+                        BrulerAllumettes(IANbAllumette);
+
                         frmJeu frmJeu = new frmJeu(pseudoJ1, pseudoJ2, adversaire, niveauIA, nbAllumettes, aQuiLeTour + 1);
                         frmJeu.Show();
                         this.Close();
@@ -200,6 +204,9 @@ namespace Le_Jeu_des_Allumettes
 
                         MessageBox.Show("L'IA a choisi de retirer " + IANbAllumette + " allumette(s).", "Tour de l'IA Intermédiaire", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         nbAllumettes -= IANbAllumette;
+
+                        BrulerAllumettes(IANbAllumette);
+
                         frmJeu FrmJeu2 = new frmJeu(pseudoJ1, pseudoJ2, adversaire, niveauIA, nbAllumettes, aQuiLeTour + 1);
                         FrmJeu2.Show();
                         this.Close();
@@ -226,6 +233,9 @@ namespace Le_Jeu_des_Allumettes
 
                         MessageBox.Show("L'IA a choisi de retirer " + IANbAllumette + " allumette(s).", "Tour de l'IA Expert", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         nbAllumettes -= IANbAllumette;
+
+                        BrulerAllumettes(IANbAllumette);
+
                         frmJeu FrmJeu = new frmJeu(pseudoJ1, pseudoJ2, adversaire, niveauIA, nbAllumettes, aQuiLeTour + 1);
                         FrmJeu.Show();
                         this.Close();
@@ -276,15 +286,31 @@ namespace Le_Jeu_des_Allumettes
             NbAllumettesAEnlever = 3;
         }
 
-        private void btnJouer_Click(object sender, EventArgs e)
+        private async void btnJouer_Click(object sender, EventArgs e)
         {
             aQuiLeTour++;
             nbAllumettes -= NbAllumettesAEnlever;
+
+            await BrulerAllumettes(NbAllumettesAEnlever);
 
             frmJeu frmJeu = new frmJeu(pseudoJ1, pseudoJ2, adversaire, niveauIA, nbAllumettes, aQuiLeTour);
             frmJeu.Show();
 
             this.Close();
+        }
+
+        private async Task BrulerAllumettes(int nombre)
+        {
+            int total = flpAffichageAllumettes.Controls.Count;
+            for (int i = total - nombre; i < total; i++)
+            {
+                if (flpAffichageAllumettes.Controls[i] is PictureBox pb)
+                    pb.Image = Image.FromFile("Ressources//allumette qui brule.gif");
+            }
+            SoundPlayer player = new SoundPlayer("Ressources//brulage d'allumage.wav");
+            player.Play();
+
+            await Task.Delay(2000);
         }
     }
 }
