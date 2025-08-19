@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Media;
 using System.Reflection.Emit;
@@ -22,6 +23,7 @@ namespace Le_Jeu_des_Allumettes
         private int nbAllumettes;
         private int aQuiLeTour;
         int NbAllumettesAEnlever = 0;
+        int IANbAllumette = 0;
         int screenWidth = Screen.PrimaryScreen.Bounds.Width;
         int screenHeight = Screen.PrimaryScreen.Bounds.Height;
 
@@ -41,7 +43,7 @@ namespace Le_Jeu_des_Allumettes
 
         private void CenterLabelInFlow()
         {
-            int targetLeftMargin = 810 * -lblTitrePage.Width / 2;
+            int targetLeftMargin = 810 - lblTitrePage.Width / 2;
 
             lblTitrePage.Margin = new Padding(targetLeftMargin, lblTitrePage.Margin.Top, lblTitrePage.Margin.Right, lblTitrePage.Margin.Bottom);
         }
@@ -167,14 +169,10 @@ namespace Le_Jeu_des_Allumettes
                         {
                             IANbAllumette = random.Next(1, 4);
                         }
-                        MessageBox.Show("L'IA a choisi de retirer " + IANbAllumette + " allumette(s).", "Tour de l'IA Naïf", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        PseudoMessageBox(IANbAllumette);
                         nbAllumettes -= IANbAllumette;
 
                         BrulerAllumettes(IANbAllumette);
-
-                        frmJeu frmJeu = new frmJeu(pseudoJ1, pseudoJ2, adversaire, niveauIA, nbAllumettes, aQuiLeTour + 1);
-                        frmJeu.Show();
-                        this.Close();
                         break;
                     case 2:
                         if (nbAllumettes > 10)
@@ -202,14 +200,10 @@ namespace Le_Jeu_des_Allumettes
                             }
                         }
 
-                        MessageBox.Show("L'IA a choisi de retirer " + IANbAllumette + " allumette(s).", "Tour de l'IA Intermédiaire", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        PseudoMessageBox(IANbAllumette);
                         nbAllumettes -= IANbAllumette;
 
                         BrulerAllumettes(IANbAllumette);
-
-                        frmJeu FrmJeu2 = new frmJeu(pseudoJ1, pseudoJ2, adversaire, niveauIA, nbAllumettes, aQuiLeTour + 1);
-                        FrmJeu2.Show();
-                        this.Close();
                         break;
                     case 3:
                         IANbAllumette = -1;
@@ -231,20 +225,37 @@ namespace Le_Jeu_des_Allumettes
                             IANbAllumette = Math.Min(nbAllumettes, new Random().Next(1, Math.Min(4, nbAllumettes + 1)));
                         }
 
-                        MessageBox.Show("L'IA a choisi de retirer " + IANbAllumette + " allumette(s).", "Tour de l'IA Expert", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        PseudoMessageBox(IANbAllumette);
                         nbAllumettes -= IANbAllumette;
 
                         BrulerAllumettes(IANbAllumette);
-
-                        frmJeu FrmJeu = new frmJeu(pseudoJ1, pseudoJ2, adversaire, niveauIA, nbAllumettes, aQuiLeTour + 1);
-                        FrmJeu.Show();
-                        this.Close();
                         break;
 
                     default:
                         return;
                 }
             }
+        }
+
+        private void PseudoMessageBox(int IANbAllumette)
+        {
+            grpPseudoMessageBox.Visible = true;
+            picInfoIcnon.Visible = true;
+            lblNbAllumetteIA.Visible = true;
+            lblNbAllumetteIA.Text = "L'IA a choisi de retirer " + IANbAllumette + " allumette(s).";
+            btnOkPseudoMessageBox.Visible = true;
+        }
+        
+        private void btnOkPseudoMessageBox_Click(object sender, EventArgs e)
+        {
+            grpPseudoMessageBox.Visible = false;
+            picInfoIcnon.Visible = false;
+            lblNbAllumetteIA.Visible = false;
+            btnOkPseudoMessageBox.Visible = false;
+
+            frmJeu frmJeu = new frmJeu(pseudoJ1, pseudoJ2, adversaire, niveauIA, nbAllumettes, aQuiLeTour + 1);
+            frmJeu.Show();
+            this.Close();
         }
 
         private void picEngrenage_Click(object sender, EventArgs e)

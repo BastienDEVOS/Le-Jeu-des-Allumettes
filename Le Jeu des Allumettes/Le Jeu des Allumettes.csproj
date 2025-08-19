@@ -29,6 +29,7 @@
     <None Remove="Ressources\brulage d%27allumage.wav" />
     <None Remove="Ressources\iconFrmTroll.ico" />
     <None Remove="Ressources\Logo le jeu des allumettes.png" />
+    <None Remove="Ressources\messagebox-information.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -75,6 +76,9 @@
 
   <ItemGroup>
     <Content Include="Ressources\brulage d'allumage.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Ressources\messagebox-information.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

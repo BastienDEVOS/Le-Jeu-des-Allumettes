@@ -9604,6 +9604,18 @@
         QmCC
 </value>
   </data>
+  <data name="picInfoIcnon.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAIAAAC0Ujn1AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        vgAADr4B6kKxwAAAABh0RVh0U29mdHdhcmUAcGFpbnQubmV0IDQuMS4zjST9ZwAAAVRJREFUSEu9ljGq
+        hDAQhucIHmWPsCd4jSDYiGDvFiIse4YHCmJjt52tNl7AUixs9jj7+DeuuolrojBv+C2M8XP8k0xCT134
+        aXO+lfTzO+l8K/20kfspQXLDO/y0sdyMnIKCmsKW4oGuDygecBvU5BSWm218YwWdVB2gXklRP+K+KerJ
+        Ky03S6pOpqhoP23IzpGXCvqmsCU7V9P/QJ8udzgw/bu54oGc4nS5L2kzGvke4wq96MvcR3RSdfBhkzu+
+        oLTPigey88n3EY1x0/mrR798t9xsRsMKr5Q7HZY3znqgkbJ2npkr6kXiQGP01B6KjAwRcgr0hBtBLT9b
+        0w50UAOL+qAbQKEd6LAFFhVnc85N2oGOB2Bxqc/WtAN9ffwDmskQxmFknHyMS8Z8oZuilwvdsDyZopfl
+        ibGo8m4FjBuYCK5tVwTXYUEE1xFnCpaDmRSHj5N/0AbpTNxirQEAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIAB7zgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgGAAAAXHKoZgAAAAFv

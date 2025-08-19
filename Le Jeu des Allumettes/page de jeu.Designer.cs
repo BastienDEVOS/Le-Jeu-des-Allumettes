@@ -43,11 +43,17 @@
             btn3 = new Button();
             btnJouer = new Button();
             lblTest = new Label();
+            grpPseudoMessageBox = new GroupBox();
+            picInfoIcnon = new PictureBox();
+            lblNbAllumetteIA = new Label();
+            btnOkPseudoMessageBox = new Button();
             flpHautPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogoHaut).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picEngrenage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picInterogation).BeginInit();
             flpAffichageAllumettes.SuspendLayout();
+            grpPseudoMessageBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)picInfoIcnon).BeginInit();
             SuspendLayout();
             // 
             // flpHautPage
@@ -216,12 +222,60 @@
             lblTest.TabIndex = 0;
             lblTest.Text = "label de test";
             // 
+            // grpPseudoMessageBox
+            // 
+            grpPseudoMessageBox.BackColor = Color.White;
+            grpPseudoMessageBox.Controls.Add(picInfoIcnon);
+            grpPseudoMessageBox.Controls.Add(lblNbAllumetteIA);
+            grpPseudoMessageBox.Controls.Add(btnOkPseudoMessageBox);
+            grpPseudoMessageBox.Font = new Font("Segoe UI Black", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            grpPseudoMessageBox.Location = new Point(673, 507);
+            grpPseudoMessageBox.Name = "grpPseudoMessageBox";
+            grpPseudoMessageBox.Size = new Size(600, 300);
+            grpPseudoMessageBox.TabIndex = 1;
+            grpPseudoMessageBox.TabStop = false;
+            grpPseudoMessageBox.Text = "Tour de l'IA";
+            grpPseudoMessageBox.Visible = false;
+            // 
+            // picInfoIcnon
+            // 
+            picInfoIcnon.Image = (Image)resources.GetObject("picInfoIcnon.Image");
+            picInfoIcnon.Location = new Point(30, 101);
+            picInfoIcnon.Name = "picInfoIcnon";
+            picInfoIcnon.Size = new Size(75, 75);
+            picInfoIcnon.SizeMode = PictureBoxSizeMode.Zoom;
+            picInfoIcnon.TabIndex = 3;
+            picInfoIcnon.TabStop = false;
+            picInfoIcnon.Visible = false;
+            // 
+            // lblNbAllumetteIA
+            // 
+            lblNbAllumetteIA.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold);
+            lblNbAllumetteIA.Location = new Point(115, 120);
+            lblNbAllumetteIA.Name = "lblNbAllumetteIA";
+            lblNbAllumetteIA.Size = new Size(475, 40);
+            lblNbAllumetteIA.TabIndex = 2;
+            lblNbAllumetteIA.Text = "L'IA a choisi de retirer ... allumette(s).";
+            lblNbAllumetteIA.Visible = false;
+            // 
+            // btnOkPseudoMessageBox
+            // 
+            btnOkPseudoMessageBox.Location = new Point(225, 222);
+            btnOkPseudoMessageBox.Name = "btnOkPseudoMessageBox";
+            btnOkPseudoMessageBox.Size = new Size(150, 60);
+            btnOkPseudoMessageBox.TabIndex = 1;
+            btnOkPseudoMessageBox.Text = "OK";
+            btnOkPseudoMessageBox.UseVisualStyleBackColor = true;
+            btnOkPseudoMessageBox.Visible = false;
+            btnOkPseudoMessageBox.Click += btnOkPseudoMessageBox_Click;
+            // 
             // frmJeu
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(237, 237, 237);
             ClientSize = new Size(1920, 1244);
             Controls.Add(lblTest);
+            Controls.Add(grpPseudoMessageBox);
             Controls.Add(btnJouer);
             Controls.Add(btn3);
             Controls.Add(btn2);
@@ -246,6 +300,8 @@
             ((System.ComponentModel.ISupportInitialize)picEngrenage).EndInit();
             ((System.ComponentModel.ISupportInitialize)picInterogation).EndInit();
             flpAffichageAllumettes.ResumeLayout(false);
+            grpPseudoMessageBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)picInfoIcnon).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -266,5 +322,9 @@
         private Button btnJouer;
         private Label lblTest;
         private Label lblTopMargin;
+        private GroupBox grpPseudoMessageBox;
+        private Button btnOkPseudoMessageBox;
+        private PictureBox picInfoIcnon;
+        private Label lblNbAllumetteIA;
     }
 }
