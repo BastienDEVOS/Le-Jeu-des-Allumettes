@@ -1,16 +1,72 @@
+using System;
+using NAudio.Wave;
+
 namespace Le_Jeu_des_Allumettes
 {
-    // AudioManager.cs
-    public static class AudioManager
+    public static class SoundManager
     {
-        public static float MusicVolume = 1.0f;           // Volume musique (0.0 à 1.0)
-        public static float SoundEffectsVolume = 1.0f;    // Volume effets (0.0 à 1.0)
+        private static WaveOutEvent musicOutput;
+        private static AudioFileReader musicReader;
 
-        public static void ApplyMusicVolume()
+        private static float musicVolume = 1f;
+        private static float effectsVolume = 1f;
+
+        public static float MusicVolume
         {
-            if (frmAccueil.musicPlayer != null)
-                frmAccueil.musicPlayer.Volume = MusicVolume;
+            get => musicVolume;
+            set
+            {
+                musicVolume = Math.Clamp(value, 0f, 1f);
+                if (musicReader != null) musicReader.Volume = musicVolume;
+            }
+        }
+
+        public static float EffectsVolume
+        {
+            get => effectsVolume;
+            set => effectsVolume = Math.Clamp(value, 0f, 1f);
+        }
+
+        public static void PlayMusic(string filePath)
+        {
+            StopMusic();
+
+            musicReader = new AudioFileReader(filePath) { Volume = musicVolume };
+            musicOutput = new WaveOutEvent();
+            musicOutput.Init(musicReader);
+
+            musicOutput.PlaybackStopped += (s, e) =>
+            {
+                musicReader.Position = 0; // relance depuis le début
+                musicOutput.Play();
+            };
+
+            musicOutput.Play();
+        }
+
+        public static void StopMusic()
+        {
+            musicOutput?.Stop();
+            musicOutput?.Dispose();
+            musicReader?.Dispose();
+            musicOutput = null;
+            musicReader = null;
+        }
+
+        public static void PlayEffect(string filePath)
+        {
+            // Chaque effet a son propre lecteur indépendant
+            var reader = new AudioFileReader(filePath) { Volume = effectsVolume };
+            var output = new WaveOutEvent();
+            output.Init(reader);
+            output.Play();
+
+            // Nettoyage après lecture
+            output.PlaybackStopped += (s, e) =>
+            {
+                reader.Dispose();
+                output.Dispose();
+            };
         }
     }
-
 }

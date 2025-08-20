@@ -318,8 +318,7 @@ namespace Le_Jeu_des_Allumettes
                 if (flpAffichageAllumettes.Controls[i] is PictureBox pb)
                     pb.Image = Image.FromFile("Ressources//allumette qui brule.gif");
             }
-            SoundPlayer player = new SoundPlayer("Ressources//brulage d'allumage.wav");
-            player.Play();
+            SoundManager.PlayEffect("Ressources/brulage d'allumette.wav");
 
             await Task.Delay(2000);
         }

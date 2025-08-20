@@ -47,7 +47,6 @@
             btnSnap = new Button();
             btnX = new Button();
             btnRetour = new Button();
-            btnConfirmer = new Button();
             flpHautPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogoHaut).BeginInit();
             ((System.ComponentModel.ISupportInitialize)trbEffectsSonore).BeginInit();
@@ -100,6 +99,7 @@
             trbEffectsSonore.Size = new Size(400, 90);
             trbEffectsSonore.TabIndex = 7;
             trbEffectsSonore.Value = 4;
+            trbEffectsSonore.Scroll += trbEffectsSonore_Scroll;
             // 
             // picMuteEffectsSonore
             // 
@@ -149,6 +149,7 @@
             trbMusic.Size = new Size(400, 90);
             trbMusic.TabIndex = 10;
             trbMusic.Value = 4;
+            trbMusic.Scroll += trbMusic_Scroll;
             // 
             // lblEffectsSonore
             // 
@@ -275,7 +276,7 @@
             btnRetour.FlatStyle = FlatStyle.Flat;
             btnRetour.Font = new Font("Segoe UI Black", 7.5F, FontStyle.Bold);
             btnRetour.ForeColor = Color.FromArgb(35, 41, 49);
-            btnRetour.Location = new Point(52, 908);
+            btnRetour.Location = new Point(188, 908);
             btnRetour.Name = "btnRetour";
             btnRetour.Size = new Size(225, 56);
             btnRetour.TabIndex = 21;
@@ -284,30 +285,11 @@
             btnRetour.UseVisualStyleBackColor = false;
             btnRetour.Click += btnRetour_Click;
             // 
-            // btnConfirmer
-            // 
-            btnConfirmer.BackColor = Color.FromArgb(214, 73, 38);
-            btnConfirmer.BackgroundImageLayout = ImageLayout.Zoom;
-            btnConfirmer.FlatAppearance.BorderColor = Color.FromArgb(106, 45, 20);
-            btnConfirmer.FlatAppearance.BorderSize = 3;
-            btnConfirmer.FlatStyle = FlatStyle.Flat;
-            btnConfirmer.Font = new Font("Segoe UI Black", 7.5F, FontStyle.Bold);
-            btnConfirmer.ForeColor = Color.FromArgb(35, 41, 49);
-            btnConfirmer.Location = new Point(327, 908);
-            btnConfirmer.Name = "btnConfirmer";
-            btnConfirmer.Size = new Size(225, 56);
-            btnConfirmer.TabIndex = 22;
-            btnConfirmer.Text = "Confirmer";
-            btnConfirmer.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnConfirmer.UseVisualStyleBackColor = false;
-            btnConfirmer.Click += btnConfirmer_Click;
-            // 
             // frmParamètres
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(237, 237, 237);
             ClientSize = new Size(600, 1004);
-            Controls.Add(btnConfirmer);
             Controls.Add(btnRetour);
             Controls.Add(btnX);
             Controls.Add(btnSnap);
@@ -366,6 +348,5 @@
         private Button btnSnap;
         private Button btnX;
         private Button btnRetour;
-        private Button btnConfirmer;
     }
 }

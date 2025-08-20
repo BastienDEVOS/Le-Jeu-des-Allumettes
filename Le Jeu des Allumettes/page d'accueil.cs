@@ -17,7 +17,7 @@ namespace Le_Jeu_des_Allumettes
             InitializeComponent();
         }
 
-        private void frmAccueil_Load(object sender, EventArgs e)
+        private async void frmAccueil_Load(object sender, EventArgs e)
         {
             if (Screen.PrimaryScreen.Bounds.Width < 1946 || Screen.PrimaryScreen.Bounds.Height < 1315)
             {
@@ -25,21 +25,14 @@ namespace Le_Jeu_des_Allumettes
                 this.Close();
             }
 
-            string fxPath = Path.Combine(Application.StartupPath, "Ressources", "allumage d'allumette.wav");
+            // Effet d’allumage
+            SoundManager.PlayEffect("Ressources/allumage d'allumette.wav");
 
-            using (SoundPlayer fxPlayer = new SoundPlayer(fxPath))
-            {
-                fxPlayer.PlaySync();
-            }
+            // Attendre avant de lancer la musique
+            await Task.Delay(3000);
 
-            string musicPath = Path.Combine(Application.StartupPath, "Ressources", "background sound.mp3");
-            musicReader = new AudioFileReader(musicPath);
-            musicReader.Volume = AudioManager.MusicVolume;
-
-            var loop = new LoopStream(musicReader);
-            musicPlayer = new WaveOutEvent();
-            musicPlayer.Init(loop);
-            musicPlayer.Play();
+            // Musique de fond en boucle
+            SoundManager.PlayMusic("Ressources/background sound.mp3");
         }
 
         private void frmAccueil_FormClosed(object sender, FormClosedEventArgs e)

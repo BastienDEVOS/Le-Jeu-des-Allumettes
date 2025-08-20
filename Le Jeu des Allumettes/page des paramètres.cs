@@ -26,9 +26,20 @@ namespace Le_Jeu_des_Allumettes
             trbEffectsSonore.Minimum = 0;
             trbEffectsSonore.Maximum = 8;
 
-            trbMusic.Value = (int)(AudioManager.MusicVolume * 8);
-            trbEffectsSonore.Value = (int)(AudioManager.SoundEffectsVolume * 8);
+            // Réaffecter la position des TrackBar à partir des valeurs du SoundManager
+            trbMusic.Value = (int)(SoundManager.MusicVolume * 8);
+            trbEffectsSonore.Value = (int)(SoundManager.EffectsVolume * 8);
         }
+        private void trbMusic_Scroll(object sender, EventArgs e)
+        {
+            SoundManager.MusicVolume = trbMusic.Value / 8f; // 0 → 1
+        }
+
+        private void trbEffectsSonore_Scroll(object sender, EventArgs e)
+        {
+            SoundManager.EffectsVolume = trbEffectsSonore.Value / 8f; // 0 → 1
+        }
+
 
         private void btnNousContacter_Click(object sender, EventArgs e)
         {
@@ -76,13 +87,6 @@ namespace Le_Jeu_des_Allumettes
                 FileName = "https://x.com/juste17947",
                 UseShellExecute = true
             });
-        }
-        private void btnConfirmer_Click(object sender, EventArgs e)
-        {
-            AudioManager.MusicVolume = trbMusic.Value * 0.125f;
-            AudioManager.SoundEffectsVolume = trbEffectsSonore.Value * 0.125f;
-
-            AudioManager.ApplyMusicVolume();
         }
 
         private void btnRetour_Click(object sender, EventArgs e)
