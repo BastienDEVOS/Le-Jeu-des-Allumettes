@@ -15,7 +15,6 @@ namespace Le_Jeu_des_Allumettes
 {
     public partial class frmJeu : Form
     {
-
         private string pseudoJ1;
         private string pseudoJ2;
         private int adversaire;
@@ -26,7 +25,6 @@ namespace Le_Jeu_des_Allumettes
         int IANbAllumette = 0;
         int screenWidth = Screen.PrimaryScreen.Bounds.Width;
         int screenHeight = Screen.PrimaryScreen.Bounds.Height;
-
         public frmJeu(string pseudoJ1, string pseudoJ2, int adversaire, int niveauIA, int nbAllumettes, int aQuiLeTour)
         {
             InitializeComponent();
@@ -50,6 +48,8 @@ namespace Le_Jeu_des_Allumettes
 
         private void frmJeu_Load(object sender, EventArgs e)
         {
+            this.BringToFront();
+
             if (nbAllumettes <= 0)
             {
                 MessageBox.Show("Le jeu est terminé ! " + (aQuiLeTour % 2 == 0 ? pseudoJ1 : pseudoJ2) + " a gagné !", "Fin du jeu", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -245,7 +245,7 @@ namespace Le_Jeu_des_Allumettes
             lblNbAllumetteIA.Text = "L'IA a choisi de retirer " + IANbAllumette + " allumette(s).";
             btnOkPseudoMessageBox.Visible = true;
         }
-        
+
         private void btnOkPseudoMessageBox_Click(object sender, EventArgs e)
         {
             grpPseudoMessageBox.Visible = false;
@@ -320,7 +320,12 @@ namespace Le_Jeu_des_Allumettes
             }
             SoundManager.PlayEffect("Ressources/brulage d'allumette.wav");
 
-            await Task.Delay(2000);
+            await Task.Delay(1800);
+        }
+
+        private void pictRetour_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

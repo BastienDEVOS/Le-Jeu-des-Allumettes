@@ -9079,32 +9079,31 @@
 </value>
   </data>
   <data name="lblAPropos.Text" xml:space="preserve">
-    <value>🔥 À propos du Jeu des Allumettes
-Bienvenue dans Le Jeu des Allumettes, un projet développé avec amour, une bonne dose de fun, et beaucoup (trop) de café par Bastien Devos — c’est moi 😎.
- Ce jeu, c’est une revisite moderne d’un classique de la stratégie qu’on a tous croisé un jour, que ce soit dans une cour de récré, sur un coin de feuille, ou autour de vraies allumettes.
- Mais ici, on oublie les cendres et le bois brûlé — place aux pixels, à une interface propre, et à une ambiance pleine de malice !
-🎯 Pourquoi ce projet ?
-À la base, l’idée m’est venue suite à des travaux faits en cours, justement sur ce thème. C’était l’occasion parfaite de mêler apprentissage, nostalgie et créativité.
- Le but ? Créer un petit jeu malin, rapide à prendre en main, mais assez piégeux pour mettre à l’épreuve les cerveaux les plus affûtés.
- Pas besoin de dragons ni d’open world ici : juste des allumettes, de la logique, et quelques coups fourrés bien sentis.
-🕹️ Comment ça marche ?
-Le principe est simple : chacun son tour, les joueurs retirent 1, 2 ou 3 allumettes d’une pile, et celui qui prend la dernière a perdu.
- Tu peux choisir de jouer contre un autre joueur ou défier une IA plus ou moins redoutable, selon ton niveau de courage ou de témérité.
-Et pour pimenter le tout : le nombre d’allumettes est réglable au début de la partie (de 10 à 30 allumettes), histoire de varier les plaisirs… ou les galères 😈.
-🧰 Techniquement, ça donne quoi ?
-Ce projet a été entièrement développé en WinForms sous Visual Studio (oui, old school mais ça fait le taf).
- Tout est fait maison :
-menus clairs et colorés,
-graphismes pixelisés maison,
-logique de jeu bien huilée,
-et même une IA qui, hélas, ne fait toujours pas le café.
-Le tout a été maquetté sous Figma, avec une attention portée à l’expérience utilisateur, au design et à un peu d’animation pour rendre le tout vivant.
-👨‍💻 Pour qui ?
-Que tu sois un stratège en herbe, un joueur du dimanche ou juste en train d’éviter tes devoirs de maths, ce jeu est fait pour toi.
- Tu peux y jouer en solo, contre une IA qui ne lâche rien, ou à deux, pour régler tes comptes avec élégance… ou mesquinerie 👀.
-❤️ Merci d’y jouer !
-Ce jeu est avant tout un projet passion, né d’un cours, d’une idée simple, et d’un vrai plaisir de coder et créer.
- Si tu t’amuses autant en y jouant que moi en le développant, alors… mission accomplie !</value>
+    <value>À propos du Jeu des Allumettes
+
+Bienvenue dans le Jeu des Allumettes, un projet entièrement développé par Bastien Devos (c’est moi).
+Je suis étudiant en informatique à l’IUT d’Amiens, et ce projet a été réalisé durant l’été 2025, après ma première année de BUT.
+Ce jeu est une revisite d’un classique de la stratégie, qu’on a même pu voir dans l’émission Fort Boyard.
+
+Pourquoi ce projet ?
+À la base, l’idée m’est venue après mes cours d’IHM (Interface Homme-Machine), qui avaient ce jeu comme « fil rouge ». Après avoir bossé dessus tout un trimestre, j’avais envie de concrétiser l’idée.
+
+Techniquement, ça donne quoi ?
+Ce projet a été entièrement développé en WinForms sous Visual Studio. Tout est fait maison :
+ - des menus clairs et colorés,
+ - des graphismes perso,
+ - la logique du jeu,
+ - et même une IA.
+Le tout a d’abord été maquetté sous Figma, avec une vraie attention portée à l’expérience utilisateur, au design et à un peu d’animations pour rendre le jeu plus vivant.
+
+Pour qui ?
+Avant tout pour moi-même : pour gagner en expérience, pour ma fierté perso, et aussi pour m’occuper pendant les vacances.
+Mais aussi pour n’importe qui qui voudrait y jouer.
+
+Merci d’y jouer ❤️
+Ce jeu est avant tout un projet de passion : né d’un cours, d’une idée simple, et d’un vrai plaisir de coder et de créer.
+Si tu t’amuses autant en y jouant que moi en le développant, alors… mission accomplie !
+Et comme disent les jeunes de nos jours : régalez-vous sur le poulet qu’est… le Jeu des Allumettes 🔥</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -47,6 +47,7 @@
             picInfoIcnon = new PictureBox();
             lblNbAllumetteIA = new Label();
             btnOkPseudoMessageBox = new Button();
+            picRetour = new PictureBox();
             flpHautPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picLogoHaut).BeginInit();
             ((System.ComponentModel.ISupportInitialize)picEngrenage).BeginInit();
@@ -54,6 +55,7 @@
             flpAffichageAllumettes.SuspendLayout();
             grpPseudoMessageBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picInfoIcnon).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picRetour).BeginInit();
             SuspendLayout();
             // 
             // flpHautPage
@@ -221,6 +223,7 @@
             lblTest.Size = new Size(145, 32);
             lblTest.TabIndex = 0;
             lblTest.Text = "label de test";
+            lblTest.Visible = false;
             // 
             // grpPseudoMessageBox
             // 
@@ -269,11 +272,23 @@
             btnOkPseudoMessageBox.Visible = false;
             btnOkPseudoMessageBox.Click += btnOkPseudoMessageBox_Click;
             // 
+            // picRetour
+            // 
+            picRetour.Image = (Image)resources.GetObject("picRetour.Image");
+            picRetour.Location = new Point(40, 1104);
+            picRetour.Name = "picRetour";
+            picRetour.Size = new Size(100, 100);
+            picRetour.SizeMode = PictureBoxSizeMode.Zoom;
+            picRetour.TabIndex = 13;
+            picRetour.TabStop = false;
+            picRetour.Click += pictRetour_Click;
+            // 
             // frmJeu
             // 
             AutoScaleMode = AutoScaleMode.None;
             BackColor = Color.FromArgb(237, 237, 237);
             ClientSize = new Size(1920, 1244);
+            Controls.Add(picRetour);
             Controls.Add(lblTest);
             Controls.Add(grpPseudoMessageBox);
             Controls.Add(btnJouer);
@@ -292,6 +307,7 @@
             MinimizeBox = false;
             MinimumSize = new Size(1946, 1315);
             Name = "frmJeu";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "page de jeu";
             Load += frmJeu_Load;
             flpHautPage.ResumeLayout(false);
@@ -302,6 +318,7 @@
             flpAffichageAllumettes.ResumeLayout(false);
             grpPseudoMessageBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)picInfoIcnon).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picRetour).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -326,5 +343,6 @@
         private Button btnOkPseudoMessageBox;
         private PictureBox picInfoIcnon;
         private Label lblNbAllumetteIA;
+        private PictureBox picRetour;
     }
 }

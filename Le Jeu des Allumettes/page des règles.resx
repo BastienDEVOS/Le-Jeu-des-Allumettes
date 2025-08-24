@@ -118,28 +118,24 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="lblRèglesJeu.Text" xml:space="preserve">
-    <value>🔥 Bienvenue dans le Jeu des Allumettes ! 🔥
-Un jeu simple, stratégique, et légèrement sadique... mais promis, personne ne se brûle (enfin presque).
-🎯 Le But du Jeu
-Tu vois ce joli tas d’allumettes ? Le but, c’est de ne surtout pas prendre la dernière.
- Oui oui, t’as bien lu. La toute dernière allumette, celle qui reste seule, abandonnée, à la fin... c’est celle qui fait perdre.
- Alors réfléchis bien à chaque coup, car ici, le gagnant, c’est celui qui s’arrête juste à temps. Ou qui piège l’autre pour qu’il termine en beauté. 😈
-🕹️ Comment Jouer
-En début de partie, tu choisis le nombre d’allumettes à placer sur la table. Entre 10 et 30, selon ton humeur, ton niveau de témérité... ou ta soif de chaos.
-Ensuite, chacun son tour, les joueurs retirent 1, 2 ou 3 allumettes du tas.
-Le jeu continue jusqu’à ce qu’il n’en reste plus qu’une...
-Et là, BIM 💥 celui qui est forcé de la prendre a perdu.
-Alors... stratégie de ninja ou coup du bluff ? À toi de jouer.
-🤖 Modes de Jeu
-👥 1 vs 1 : Affronte un pote, un voisin, ton chat (ok non), bref quelqu’un de réel.
-🧠 Solo vs IA : Joue contre notre intelligence artificielle maison, prête à te donner du fil à retordre. Elle ne dort jamais, ne cligne pas des yeux... et elle déteste perdre.
-💬 Astuces &amp; Petits Conseils
+    <value>Les règles du jeu sont simples :
+
+En début de partie, tu choisis le nombre d’allumettes avec lequel tu veux jouer : entre 10 et 30, selon ton humeur.
+À chaque tour, le joueur choisit s’il veut enlever 1, 2 ou 3 allumettes. Mais attention : celui qui prend la dernière a perdu !
+
+Plusieurs modes de jeu disponibles :
+
+1 vs 1 : Affronte un pote, un membre de ta famille, ton partenaire, un voisin, un mec random dans la rue, ton chat ou ton chien (ok non)… bref quelqu’un de réel.
+
+Vs l’IA : Joue contre mon « intelligence artificielle » maison, prête à te donner du fil à retordre. Elle ne dort jamais, ne cligne pas des yeux, et propose 3 niveaux de difficulté : du mec qui lance le jeu pour la première fois jusqu’à celui qui joue depuis ses 3 ans et qui a au moins 3000 heures de jeu.
+
+Astuces et conseils :
+
 Tu veux éviter la dernière allumette ? Compte bien, et pense à forcer l’autre à la prendre !
-Ne prends pas toujours 3 d’un coup, sinon tu risques de te faire avoir comme un bleu.
-L’IA a peut-être un cerveau en silicium, mais toi t’as le sens de la tactique (et l’instinct de survie).
-🧨 Bonus :
-Fous rires garantis, tensions au max, et parfois… un brin de mauvaise foi.
- Mais c’est ça aussi, le Jeu des Allumettes : un duel de neurones, en mode allumé 🔥</value>
+
+Ne prends pas toujours 3 d’un coup, sinon tu risques de te faire avoir comme un bleu, et la partie risque de tourner court.
+
+L’IA n’est peut-être que quelques lignes de code, mais toi, t’as le sens de la tactique… alors utilise-le !</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="picLogoHaut.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

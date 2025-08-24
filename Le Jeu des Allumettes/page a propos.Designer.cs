@@ -80,7 +80,7 @@
             btnRetour.FlatStyle = FlatStyle.Flat;
             btnRetour.Font = new Font("Segoe UI Black", 7.5F, FontStyle.Bold);
             btnRetour.ForeColor = Color.FromArgb(31, 41, 49);
-            btnRetour.Location = new Point(125, 1000);
+            btnRetour.Location = new Point(125, 1018);
             btnRetour.Name = "btnRetour";
             btnRetour.Size = new Size(350, 56);
             btnRetour.TabIndex = 8;
@@ -90,10 +90,10 @@
             // 
             // lblAPropos
             // 
-            lblAPropos.Font = new Font("Segoe UI Black", 5F, FontStyle.Bold);
-            lblAPropos.Location = new Point(25, 108);
+            lblAPropos.Font = new Font("Segoe UI Black", 6.3F, FontStyle.Bold);
+            lblAPropos.Location = new Point(25, 93);
             lblAPropos.Name = "lblAPropos";
-            lblAPropos.Size = new Size(550, 866);
+            lblAPropos.Size = new Size(550, 904);
             lblAPropos.TabIndex = 9;
             lblAPropos.Text = resources.GetString("lblAPropos.Text");
             // 

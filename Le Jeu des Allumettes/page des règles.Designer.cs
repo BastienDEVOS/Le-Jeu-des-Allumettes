@@ -46,7 +46,7 @@
             btnRetour.FlatStyle = FlatStyle.Flat;
             btnRetour.Font = new Font("Segoe UI Black", 7.5F, FontStyle.Bold);
             btnRetour.ForeColor = Color.FromArgb(31, 41, 49);
-            btnRetour.Location = new Point(125, 886);
+            btnRetour.Location = new Point(125, 873);
             btnRetour.Name = "btnRetour";
             btnRetour.Size = new Size(350, 56);
             btnRetour.TabIndex = 3;
@@ -56,8 +56,8 @@
             // 
             // lblRèglesJeu
             // 
-            lblRèglesJeu.Font = new Font("Segoe UI Black", 5.5F, FontStyle.Bold);
-            lblRèglesJeu.Location = new Point(25, 101);
+            lblRèglesJeu.Font = new Font("Segoe UI Black", 6.3F, FontStyle.Bold);
+            lblRèglesJeu.Location = new Point(25, 108);
             lblRèglesJeu.Name = "lblRèglesJeu";
             lblRèglesJeu.Size = new Size(550, 750);
             lblRèglesJeu.TabIndex = 4;

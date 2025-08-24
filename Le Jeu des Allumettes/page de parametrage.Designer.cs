@@ -439,6 +439,7 @@
             MinimizeBox = false;
             MinimumSize = new Size(1945, 1272);
             Name = "frmParametrage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "page de parametrage";
             FormClosing += frmParametres_FormClosing;
             flpHautPage.ResumeLayout(false);

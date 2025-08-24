@@ -190,7 +190,6 @@ namespace Le_Jeu_des_Allumettes
 
             NbAllumettes = (int)nupNbAllumettes.Value;
 
-
             frmJeu FrmJeu = new frmJeu(pseudoJ1, pseudoJ2, Adversaire, NiveauIA, NbAllumettes, AQuiLetour);
             FrmJeu.Show();
         }
